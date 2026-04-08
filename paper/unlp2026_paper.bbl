@@ -1,0 +1,106 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Chen et~al.(2024)Chen, Xiao, Zhang, Luo, Lian, and Liu}]{chen2024bge}
+Jianlv Chen, Shitao Xiao, Peitian Zhang, Kun Luo, Defu Lian, and Zheng Liu.
+  2024.
+\newblock {BGE M3-Embedding}: Multi-lingual, multi-functionality,
+  multi-granularity text embeddings through self-knowledge distillation.
+\newblock In \emph{Findings of ACL}.
+
+\bibitem[{Cho et~al.(2024)Cho, Hu, Sehrawat, Raj, and Bansal}]{cho2024m3docrag}
+Jaemin Cho, Debanjan Hu, Bhanu Sehrawat, Bhiksha Raj, and Mohit Bansal. 2024.
+\newblock {M3DocRAG}: Multi-modal retrieval is what you need for multi-page
+  multi-document understanding.
+\newblock \emph{arXiv preprint arXiv:2411.04952}.
+
+\bibitem[{Dettmers et~al.(2024)Dettmers, Pagnoni, Rodola, and
+  Zettlemoyer}]{dettmers2024qlora}
+Tim Dettmers, Artidoro Pagnoni, Ali Rodola, and Luke Zettlemoyer. 2024.
+\newblock {QLoRA}: Efficient finetuning of quantized {LLM}s.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~36.
+
+\bibitem[{Faysse et~al.(2024)Faysse, Sibille, Wu, Omrani, Viaud, Hudelot, and
+  Colombo}]{faysse2024colpali}
+Manuel Faysse, Hugues Sibille, Tony Wu, Bilel Omrani, Gautier Viaud, Celine
+  Hudelot, and Pierre Colombo. 2024.
+\newblock {ColPali}: Efficient document retrieval with vision language models.
+\newblock In \emph{EMNLP}.
+
+\bibitem[{Gerganov(2023)}]{llamacpp}
+Georgi Gerganov. 2023.
+\newblock {llama.cpp}: {LLM} inference in {C/C++}.
+\newblock \url{https://github.com/ggerganov/llama.cpp}.
+
+\bibitem[{Hendrycks et~al.(2020)Hendrycks, Liu, Wallace, Dziedzic, Krishnan,
+  and Song}]{hendrycks2020pretrained}
+Dan Hendrycks, Xiaoyuan Liu, Eric Wallace, Adam Dziedzic, Rishabh Krishnan, and
+  Dawn Song. 2020.
+\newblock Pretrained transformers improve out-of-distribution robustness.
+\newblock In \emph{Proceedings of ACL}.
+
+\bibitem[{{INSAIT Institute}(2025)}]{mamaylm2025}
+{INSAIT Institute}. 2025.
+\newblock {MamayLM}: First ukrainian instruction-tuned language model based on
+  {Gemma-3}.
+\newblock Hugging Face model hub.
+
+\bibitem[{Izacard et~al.(2022)Izacard, Caron, Hosseini, Riedel, Bojanowski,
+  Joulin, and Grave}]{izacard2022unsupervised}
+Gautier Izacard, Mathilde Caron, Lucas Hosseini, Sebastian Riedel, Piotr
+  Bojanowski, Armand Joulin, and Edouard Grave. 2022.
+\newblock Unsupervised dense information retrieval with contrastive learning.
+\newblock In \emph{Transactions on Machine Learning Research}.
+
+\bibitem[{Johnson et~al.(2019)Johnson, Douze, and
+  J{\'e}gou}]{johnson2019billion}
+Jeff Johnson, Matthijs Douze, and Herv{\'e} J{\'e}gou. 2019.
+\newblock Billion-scale similarity search with {GPU}s.
+\newblock \emph{IEEE Transactions on Big Data}, 7(3):535--547.
+
+\bibitem[{Lewis et~al.(2020)Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal,
+  K{\"u}ttler, Lewis, Yih, Rockt{\"a}schel, Riedel, and
+  Kiela}]{lewis2020retrieval}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich K{\"u}ttler, Mike Lewis, Wen-tau Yih, Tim
+  Rockt{\"a}schel, Sebastian Riedel, and Douwe Kiela. 2020.
+\newblock Retrieval-augmented generation for knowledge-intensive {NLP} tasks.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~33.
+
+\bibitem[{Luan et~al.(2021)Luan, Eisenstein, Toutanova, and
+  Collins}]{luan2021sparse}
+Yi~Luan, Jacob Eisenstein, Kristina Toutanova, and Michael Collins. 2021.
+\newblock Sparse, dense, and attentional representations for text retrieval.
+\newblock In \emph{TACL}.
+
+\bibitem[{{Qwen Team}(2025)}]{qwen3_2025}
+{Qwen Team}. 2025.
+\newblock Qwen3 technical report.
+\newblock arXiv preprint arXiv:2505.09388.
+
+\bibitem[{Robertson and Zaragoza(2009)}]{robertson2009probabilistic}
+Stephen Robertson and Hugo Zaragoza. 2009.
+\newblock The probabilistic relevance framework: {BM25} and beyond.
+\newblock \emph{Foundations and Trends in Information Retrieval},
+  3(4):333--389.
+
+\bibitem[{{UNLP 2026 Organizers}(2026)}]{unlp2026task}
+{UNLP 2026 Organizers}. 2026.
+\newblock {UNLP} 2026 shared task: Multi-domain ukrainian document question
+  answering.
+\newblock In \emph{Proceedings of the Ukrainian NLP Workshop (UNLP)}.
+\newblock Task description; citation to be updated with final proceedings.
+
+\bibitem[{Zhang et~al.(2023)Zhang, Thakur, Ogundepo, Kamalloo, Alfonso-Hermelo,
+  Li, Liu, Rezagholizadeh, and Lin}]{zhang2023miracl}
+Xinyu Zhang, Nandan Thakur, Odunayo Ogundepo, Ehsan Kamalloo, David
+  Alfonso-Hermelo, Xiaoguang Li, Qun Liu, Mehdi Rezagholizadeh, and Jimmy Lin.
+  2023.
+\newblock {MIRACL}: A multilingual retrieval dataset covering 18 diverse
+  languages.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  11:1114--1131.
+
+\end{thebibliography}

@@ -1,0 +1,6 @@
+system_name,preset,avg_score_delta,doc_flip_rate,page_change_rate,answer_change_rate,long_doc_proxy,trust_tier
+v7_full_dev,v7_baseline,0.0,0.0,0.0,0.0,no,trusted_offline
+candidate_v5_refocus_v1_full_dev,candidate_v5_refocus_v1,0.00032675513017636147,0.06290672451193059,0.1648590021691974,0.0824295010845987,no,trusted_offline
+candidate_ddl_v3_fulldev,candidate_dense_doc_lock_v3,0.017775823866690455,0.06941431670281996,0.16702819956616052,0.049891540130151846,yes,trusted_offline
+candidate_dense_margin_lock_v1_full_dev,candidate_dense_margin_lock_v1,-0.0023069568907596203,0.06290672451193059,0.15835140997830802,0.049891540130151846,yes,trusted_offline
+v9_full_dev,v9_regression,-0.12004441654207716,0.30151843817787416,0.5336225596529284,0.15835140997830802,no,trusted_offline

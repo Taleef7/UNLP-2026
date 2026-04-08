@@ -1,0 +1,4 @@
+system_name,local_full_dev,local_delta_vs_v7,public_score,public_delta_vs_v7,private_score,private_delta_vs_v7,interpretation
+v7,0.8634069432886881,0.0,0.8688,0.0,0.8722,0.0,Competition winner despite not being the strongest local candidate.
+v13,0.8637336984188643,0.00032675513017621505,0.8231,-0.04569999999999996,0.8441,-0.028100000000000014,Locally promising prompt-only idea that failed on Kaggle.
+v14,0.8811827671553786,0.01777582386669052,0.832,-0.036800000000000055,0.8396,-0.03259999999999996,Locally strong dense-doc-lock variant that failed on Kaggle.

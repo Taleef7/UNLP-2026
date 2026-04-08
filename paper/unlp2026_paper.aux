@@ -1,0 +1,103 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\bibstyle{acl_natbib}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand\babel@aux[2]{}
+\@nameuse{bbl@beforestart}
+\citation{unlp2026task}
+\citation{chen2024bge}
+\citation{qwen3_2025}
+\citation{mamaylm2025}
+\citation{unlp2026task}
+\citation{lewis2020retrieval}
+\citation{izacard2022unsupervised}
+\citation{zhang2023miracl}
+\citation{chen2024bge}
+\babel@aux{english}{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{eq:metric}{{1}{1}{Introduction}{equation.1.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Task and Data}{1}{section.2}\protected@file@percent }
+\citation{cho2024m3docrag}
+\citation{lewis2020retrieval}
+\citation{faysse2024colpali}
+\citation{hendrycks2020pretrained}
+\citation{chen2024bge}
+\citation{johnson2019billion}
+\citation{qwen3_2025}
+\citation{mamaylm2025}
+\citation{llamacpp}
+\citation{luan2021sparse,robertson2009probabilistic}
+\citation{faysse2024colpali}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{2}{section.3}\protected@file@percent }
+\newlabel{sec:related}{{3}{2}{Related Work}{section.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Multilingual Dense Retrieval.}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{RAG for Document QA.}{2}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Domain Shift in NLP.}{2}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}System Description (v7)}{2}{section.4}\protected@file@percent }
+\newlabel{sec:system}{{4}{2}{System Description (v7)}{section.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Stage 1: Text Extraction.}{2}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage 2: Dense Retrieval.}{2}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage 3: Page-Level Reranking.}{2}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage 4: MCQ Answer Generation.}{2}{section*.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Retrieval on full dev ($N$=461). \textbf  {Bold} = best. \textsuperscript  {$\dagger $}Doc@$k$: fraction of questions for which the true document is in the top-$k$ retrieved; Pg@$k$: same for the true page.\relax }}{2}{table.caption.8}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:retrieval}{{1}{2}{Retrieval on full dev ($N$=461). \textbf {Bold} = best. \textsuperscript {$\dagger $}Doc@$k$: fraction of questions for which the true document is in the top-$k$ retrieved; Pg@$k$: same for the true page.\relax }{table.caption.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Full-dev results ($N$=461). Closed-book: retrieval disabled. Fair 4B vs.\ v7: $\Delta {=}{+}0.023$, bootstrap CI $[{+}0.006,{+}0.041]$. Rerank column shows reranking stage wall time on A30.\relax }}{2}{table.caption.9}\protected@file@percent }
+\newlabel{tab:main}{{2}{2}{Full-dev results ($N$=461). Closed-book: retrieval disabled. Fair 4B vs.\ v7: $\Delta {=}{+}0.023$, bootstrap CI $[{+}0.006,{+}0.041]$. Rerank column shows reranking stage wall time on A30.\relax }{table.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Retrieval Experiments}{2}{section.5}\protected@file@percent }
+\newlabel{sec:retrieval}{{5}{2}{Retrieval Experiments}{section.5}{}}
+\citation{qwen3_2025}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Main Results}{3}{section.6}\protected@file@percent }
+\newlabel{sec:results}{{6}{3}{Main Results}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Prompt and Answering Ablations}{3}{section.7}\protected@file@percent }
+\newlabel{sec:prompt}{{7}{3}{Prompt and Answering Ablations}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Prompt format.}{3}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Context-size sensitivity.}{3}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Alternative LLM.}{3}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pass count.}{3}{section*.13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Local full-dev vs.\ Kaggle public composite. sg\,=\,structure-guard (\S  \ref  {sec:gap}). Diagonal: $y{=}x$ (no gap). Only v7 lies above it; all locally improved systems regressed. Horizontal bars on v13 and v14 show 95\% bootstrap CI for local composite; v13's interval overlaps the v7 reference (dotted vertical), confirming it was never a decisive offline win.\relax }}{3}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:gap}{{1}{3}{Local full-dev vs.\ Kaggle public composite. sg\,=\,structure-guard (\S \ref {sec:gap}). Diagonal: $y{=}x$ (no gap). Only v7 lies above it; all locally improved systems regressed. Horizontal bars on v13 and v14 show 95\% bootstrap CI for local composite; v13's interval overlaps the v7 reference (dotted vertical), confirming it was never a decisive offline win.\relax }{figure.caption.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Submission lineage. \textbf  {v7} is the final best. All systems with positive local deltas regressed on Kaggle (Figure~\ref  {fig:gap}).\relax }}{3}{table.caption.15}\protected@file@percent }
+\newlabel{tab:lineage}{{3}{3}{Submission lineage. \textbf {v7} is the final best. All systems with positive local deltas regressed on Kaggle (Figure~\ref {fig:gap}).\relax }{table.caption.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Submission Lineage and Generalization Gap}{3}{section.8}\protected@file@percent }
+\newlabel{sec:gap}{{8}{3}{Submission Lineage and Generalization Gap}{section.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Risk signals vs.\ Kaggle public outcome. ``Flip\%'' = doc change rate vs.\ v7 (full-dev). ``Imbal.'' = per-domain $\Delta {>}0.01$. ``Long-doc'' = heuristic targeting docs $\geq $25 pages. All four regressed systems showed $\geq $1 high-risk signal; v7 showed none.\relax }}{4}{table.caption.16}\protected@file@percent }
+\newlabel{tab:risk}{{4}{4}{Risk signals vs.\ Kaggle public outcome. ``Flip\%'' = doc change rate vs.\ v7 (full-dev). ``Imbal.'' = per-domain $\Delta {>}0.01$. ``Long-doc'' = heuristic targeting docs $\geq $25 pages. All four regressed systems showed $\geq $1 high-risk signal; v7 showed none.\relax }{table.caption.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Error breakdown for v7 on full dev ($N$=461).\relax }}{4}{table.caption.17}\protected@file@percent }
+\newlabel{tab:errors}{{5}{4}{Error breakdown for v7 on full dev ($N$=461).\relax }{table.caption.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Error Analysis}{4}{section.9}\protected@file@percent }
+\newlabel{sec:error}{{9}{4}{Error Analysis}{section.9}{}}
+\citation{dettmers2024qlora}
+\bibdata{unlp2026}
+\bibcite{chen2024bge}{{1}{2024}{{Chen et~al.}}{{Chen, Xiao, Zhang, Luo, Lian, and Liu}}}
+\bibcite{cho2024m3docrag}{{2}{2024}{{Cho et~al.}}{{Cho, Hu, Sehrawat, Raj, and Bansal}}}
+\bibcite{dettmers2024qlora}{{3}{2024}{{Dettmers et~al.}}{{Dettmers, Pagnoni, Rodola, and Zettlemoyer}}}
+\bibcite{faysse2024colpali}{{4}{2024}{{Faysse et~al.}}{{Faysse, Sibille, Wu, Omrani, Viaud, Hudelot, and Colombo}}}
+\bibcite{llamacpp}{{5}{2023}{{Gerganov}}{{}}}
+\bibcite{hendrycks2020pretrained}{{6}{2020}{{Hendrycks et~al.}}{{Hendrycks, Liu, Wallace, Dziedzic, Krishnan, and Song}}}
+\bibcite{mamaylm2025}{{7}{2025}{{INSAIT Institute}}{{}}}
+\bibcite{izacard2022unsupervised}{{8}{2022}{{Izacard et~al.}}{{Izacard, Caron, Hosseini, Riedel, Bojanowski, Joulin, and Grave}}}
+\bibcite{johnson2019billion}{{9}{2019}{{Johnson et~al.}}{{Johnson, Douze, and J{\'e}gou}}}
+\bibcite{lewis2020retrieval}{{10}{2020}{{Lewis et~al.}}{{Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal, K{\"u}ttler, Lewis, Yih, Rockt{\"a}schel, Riedel, and Kiela}}}
+\bibcite{luan2021sparse}{{11}{2021}{{Luan et~al.}}{{Luan, Eisenstein, Toutanova, and Collins}}}
+\bibcite{qwen3_2025}{{12}{2025}{{Qwen Team}}{{}}}
+\bibcite{robertson2009probabilistic}{{13}{2009}{{Robertson and Zaragoza}}{{}}}
+\bibcite{unlp2026task}{{14}{2026}{{UNLP 2026 Organizers}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{5}{section.10}\protected@file@percent }
+\bibcite{zhang2023miracl}{{15}{2023}{{Zhang et~al.}}{{Zhang, Thakur, Ogundepo, Kamalloo, Alfonso-Hermelo, Li, Liu, Rezagholizadeh, and Lin}}}
+\gdef \@abspage@last{6}

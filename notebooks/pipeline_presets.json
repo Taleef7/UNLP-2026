@@ -1,0 +1,583 @@
+{
+  "base_local": {
+    "extraction": {
+      "mode": "raw",
+      "neighbor_bleed_chars": 200,
+      "table_aware": false
+    },
+    "retrieval": {
+      "top_k": 20,
+      "index_mode": "page",
+      "hybrid_enabled": false,
+      "sparse_backend": "bm25",
+      "sparse_top_k": 40,
+      "hybrid_fusion": "rrf",
+      "hybrid_rrf_k": 60,
+      "hybrid_dense_weight": 1.0,
+      "hybrid_sparse_weight": 1.0,
+      "bge_max_length": 1536,
+      "bge_batch_size": 8,
+      "query_batch_size": 32,
+      "query_max_length": 256,
+      "structure_seed_top_k": 60,
+      "structure_doc_topn": 3,
+      "structure_pages_per_doc": 6,
+      "structure_chunk_chars": 700,
+      "structure_chunk_overlap": 120,
+      "structure_heading_max_chars": 120,
+      "structure_chunk_min_chars": 180,
+      "structure_bge_batch_size": 32,
+      "structure_max_length": 512,
+      "structure_doc_guard_enabled": false,
+      "structure_doc_guard_top_pages": 2,
+      "structure_doc_guard_secondary_weight": 0.35
+    },
+    "rerank": {
+      "mode": "page",
+      "model_preference": [
+        "bge"
+      ],
+      "max_length": 1024,
+      "batch_size": 8,
+      "page_text_chars": 4000,
+      "doc_candidates_max": 6,
+      "doc_preview_pages": 2,
+      "doc_skip_topn": 3,
+      "doc_skip_margin": 0.035
+    },
+    "llm": {
+      "prompt_variant": "v4_evidence",
+      "top_k_context": 4,
+      "max_chars_per_page": 3500,
+      "base_passes": 1,
+      "hard_passes": 1,
+      "easy_passes": 1,
+      "confidence_gate_enabled": false,
+      "easy_doc_margin": 0.12,
+      "easy_page_margin": 0.05,
+      "vote_temp": 0.5,
+      "vote_margin": 0.08,
+      "long_doc_hard_pages": 80,
+      "n_ctx_candidates": [
+        8192,
+        4096
+      ]
+    },
+    "page_selection": {
+      "strategy": "same_doc_answer_aware",
+      "answer_conditioning": "predicted_answer",
+      "page_select_topk": 3,
+      "segment_mode": "disabled",
+      "segment_window": 900,
+      "segment_stride": 512,
+      "segment_max_length": 256,
+      "summary_topk": 3,
+      "summary_chars": 320,
+      "summary_heading_max_chars": 120,
+      "summary_max_length": 256,
+      "threshold_delta": 0.02,
+      "threshold_max_pages": 4,
+      "short_doc_max_pages": 12,
+      "stage2_mode": "disabled",
+      "stage2_margin": 0.03
+    },
+    "confidence_routing": {
+      "enabled": false,
+      "model_kind": "heuristic",
+      "feature_keys": [
+        "dense_doc_margin",
+        "final_doc_margin",
+        "top_page_margin",
+        "vote_agreement",
+        "doc_length_pages",
+        "doc_rerank_changed",
+        "doc_guard_changed",
+        "page_stage2_used"
+      ]
+    },
+    "contracts": {
+      "fail_on_component_fallback": false,
+      "require_reranker": null,
+      "require_gguf_filename": null,
+      "require_n_ctx": null,
+      "require_bm25_backend": false
+    },
+    "runtime": {
+      "enable_runtime_governor": false,
+      "time_budget_hours": 8.5,
+      "fast_mode_warmup_q": 25,
+      "fast_context_pages_cap": 3,
+      "fast_max_chars_per_page_cap": 2500,
+      "fast_disable_page_stage2": true
+    }
+  },
+  "v7_baseline": {
+    "inherits": "base_local",
+    "name": "v7_baseline",
+    "description": "Scored recovery baseline. Page-level rerank with answer-aware page selection.",
+    "reference_kaggle_score": 0.8688,
+    "rerank": {
+      "mode": "page",
+      "model_preference": [
+        "qwen3_0_6b",
+        "bge"
+      ],
+      "max_length": 2048,
+      "batch_size": 4
+    },
+    "llm": {
+      "top_k_context": 4,
+      "max_chars_per_page": 3500,
+      "base_passes": 3,
+      "hard_passes": 3
+    },
+    "contracts": {
+      "require_reranker": "qwen3_0_6b",
+      "require_gguf_filename": "MamayLM-Gemma-3-12B-IT-v1.0.Q4_K_M.gguf",
+      "require_n_ctx": 8192
+    },
+    "page_selection": {
+      "strategy": "same_doc_answer_aware",
+      "segment_mode": "disabled",
+      "stage2_mode": "disabled"
+    }
+  },
+  "v8_quality_branch": {
+    "inherits": "base_local",
+    "name": "v8_quality_branch",
+    "description": "Quality-first branch. Broad page rerank, precomputed segments, and 3-pass voting.",
+    "retrieval": {
+      "top_k": 20,
+      "bge_max_length": 2048
+    },
+    "rerank": {
+      "mode": "page",
+      "model_preference": [
+        "qwen3_4b",
+        "bge"
+      ],
+      "max_length": 1024,
+      "batch_size": 4
+    },
+    "llm": {
+      "top_k_context": 5,
+      "max_chars_per_page": 4000,
+      "base_passes": 3,
+      "hard_passes": 3
+    },
+    "page_selection": {
+      "strategy": "locked_top_doc_all_pages",
+      "segment_mode": "precompute",
+      "segment_window": 1100,
+      "segment_stride": 256,
+      "stage2_mode": "always"
+    }
+  },
+  "v9_regression": {
+    "inherits": "base_local",
+    "name": "v9_regression",
+    "description": "Regression case. Doc rerank, lazy segments, conditional voting, and runtime governor.",
+    "reference_kaggle_score": 0.6716,
+    "retrieval": {
+      "top_k": 16
+    },
+    "rerank": {
+      "mode": "doc",
+      "model_preference": [
+        "qwen3_4b",
+        "bge"
+      ],
+      "max_length": 1024,
+      "batch_size": 4,
+      "doc_candidates_max": 6,
+      "doc_preview_pages": 2,
+      "doc_skip_topn": 3,
+      "doc_skip_margin": 0.035
+    },
+    "llm": {
+      "top_k_context": 4,
+      "max_chars_per_page": 3200,
+      "base_passes": 1,
+      "hard_passes": 3,
+      "vote_margin": 0.08
+    },
+    "contracts": {
+      "require_reranker": "qwen3_4b",
+      "require_gguf_filename": "MamayLM-Gemma-3-12B-IT-v1.0.Q4_K_M.gguf",
+      "require_n_ctx": 8192
+    },
+    "page_selection": {
+      "strategy": "locked_top_doc_all_pages",
+      "segment_mode": "lazy",
+      "segment_window": 900,
+      "segment_stride": 512,
+      "page_select_topk": 3,
+      "short_doc_max_pages": 12,
+      "stage2_mode": "adaptive",
+      "stage2_margin": 0.03
+    },
+    "runtime": {
+      "enable_runtime_governor": true,
+      "time_budget_hours": 8.5,
+      "fast_mode_warmup_q": 25,
+      "fast_context_pages_cap": 3,
+      "fast_max_chars_per_page_cap": 2500,
+      "fast_disable_page_stage2": true
+    }
+  },
+  "candidate_lazy_segments_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_lazy_segments_v1",
+    "description": "v7 baseline with locked top-doc search and lazy long-document segments only.",
+    "page_selection": {
+      "strategy": "locked_top_doc_all_pages",
+      "segment_mode": "lazy",
+      "stage2_mode": "adaptive",
+      "stage2_margin": 0.03,
+      "page_select_topk": 3
+    }
+  },
+  "candidate_locked_top_doc_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_locked_top_doc_v1",
+    "description": "v7 baseline with all-page search inside the top document only.",
+    "page_selection": {
+      "strategy": "locked_top_doc_all_pages",
+      "segment_mode": "disabled",
+      "stage2_mode": "disabled",
+      "page_select_topk": 3
+    }
+  },
+  "candidate_structure_chunks_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_structure_chunks_v1",
+    "description": "v7 baseline with structure-aware subchunk recall inside the top retrieved documents.",
+    "retrieval": {
+      "index_mode": "structure_chunks",
+      "structure_seed_top_k": 60,
+      "structure_doc_topn": 3,
+      "structure_pages_per_doc": 6,
+      "structure_chunk_chars": 700,
+      "structure_chunk_overlap": 120,
+      "structure_heading_max_chars": 120,
+      "structure_chunk_min_chars": 180,
+      "structure_max_length": 512
+    }
+  },
+  "candidate_structure_chunks_v3_short_doc": {
+    "inherits": "candidate_structure_chunks_v1",
+    "name": "candidate_structure_chunks_v3_short_doc",
+    "description": "Structure chunks gated by top-1 doc page count. Threshold=25: all domain_1 docs (min 25 pages) get chunks; 97% of domain_2 docs (<25 pages) skip ALL chunks for that question, preventing cross-domain promotion.",
+    "retrieval": {
+      "structure_doc_page_threshold": 25
+    }
+  },
+  "candidate_structure_chunks_v2_doc_guard": {
+    "inherits": "candidate_structure_chunks_v1",
+    "name": "candidate_structure_chunks_v2_doc_guard",
+    "description": "Structure-chunk candidate with a post-rerank doc-evidence guard to reduce single-page doc swaps.",
+    "retrieval": {
+      "structure_doc_guard_enabled": true,
+      "structure_doc_guard_top_pages": 2,
+      "structure_doc_guard_secondary_weight": 0.35
+    }
+  },
+  "candidate_page_summary_selector_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_page_summary_selector_v1",
+    "description": "v7 baseline with summary-based shortlist selection inside the chosen document.",
+    "page_selection": {
+      "strategy": "summary_then_answer_aware",
+      "summary_topk": 3,
+      "summary_chars": 320,
+      "stage2_mode": "disabled"
+    }
+  },
+  "candidate_avir_threshold_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_avir_threshold_v1",
+    "description": "v7 baseline with thresholded page shortlist selection inside the chosen document.",
+    "page_selection": {
+      "strategy": "avir_threshold",
+      "threshold_delta": 0.02,
+      "threshold_max_pages": 4,
+      "stage2_mode": "disabled"
+    }
+  },
+  "candidate_stronger_reranker_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_stronger_reranker_v1",
+    "description": "v7 baseline with a stronger page-level reranker only.",
+    "rerank": {
+      "mode": "page",
+      "model_preference": [
+        "qwen3_4b",
+        "qwen3_0_6b",
+        "bge"
+      ],
+      "max_length": 1024,
+      "batch_size": 4
+    }
+  },
+  "candidate_stronger_reranker_v2_fair": {
+    "inherits": "v7_baseline",
+    "name": "candidate_stronger_reranker_v2_fair",
+    "description": "Fair 4B reranker retest: identical to v7_baseline except reranker preference favors qwen3_4b while preserving the baseline page-level rerank budget and context length.",
+    "rerank": {
+      "mode": "page",
+      "model_preference": [
+        "qwen3_4b",
+        "qwen3_0_6b",
+        "bge"
+      ],
+      "max_length": 2048,
+      "batch_size": 4
+    },
+    "contracts": {
+      "require_reranker": "qwen3_4b",
+      "require_gguf_filename": "MamayLM-Gemma-3-12B-IT-v1.0.Q4_K_M.gguf",
+      "require_n_ctx": 8192
+    }
+  },
+  "candidate_v5refocus_reranker4b_fair": {
+    "inherits": "candidate_stronger_reranker_v2_fair",
+    "name": "candidate_v5refocus_reranker4b_fair",
+    "description": "Fair 4B reranker retest plus the v5_refocus prompt variant. Keeps the v7 rerank budget while combining the strongest fair reranker evidence with the prompt-only attention refocus change.",
+    "llm": {
+      "prompt_variant": "v5_refocus"
+    }
+  },
+  "candidate_stronger_reranker_v3_8b_fair": {
+    "inherits": "v7_baseline",
+    "name": "candidate_stronger_reranker_v3_8b_fair",
+    "description": "Fair 8B reranker retest: identical to v7_baseline except reranker preference favors qwen3_8b while preserving the baseline page-level rerank budget and context length.",
+    "rerank": {
+      "mode": "page",
+      "model_preference": [
+        "qwen3_8b",
+        "qwen3_4b",
+        "qwen3_0_6b",
+        "bge"
+      ],
+      "max_length": 2048,
+      "batch_size": 4
+    },
+    "contracts": {
+      "require_reranker": "qwen3_8b",
+      "require_gguf_filename": "MamayLM-Gemma-3-12B-IT-v1.0.Q4_K_M.gguf",
+      "require_n_ctx": 8192
+    }
+  },
+  "candidate_stronger_reranker_v3_8b_feasibility": {
+    "inherits": "candidate_stronger_reranker_v3_8b_fair",
+    "name": "candidate_stronger_reranker_v3_8b_feasibility",
+    "description": "Feasibility-only 8B reranker lane for March 30, 2026. Same single-GPU pipeline target as the fair 8B preset, but report only as feasibility evidence rather than a trusted fair ablation until end-to-end compatibility and runtime are confirmed."
+  },
+  "candidate_conditional_voting_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_conditional_voting_v1",
+    "description": "v7 baseline with 1-pass default and 3-pass only for ambiguous or long-doc cases.",
+    "llm": {
+      "base_passes": 1,
+      "hard_passes": 3,
+      "vote_margin": 0.08,
+      "long_doc_hard_pages": 80
+    }
+  },
+  "candidate_runtime_guard_v1": {
+    "inherits": "candidate_conditional_voting_v1",
+    "name": "candidate_runtime_guard_v1",
+    "description": "v7-first candidate with runtime governor enabled.",
+    "runtime": {
+      "enable_runtime_governor": true,
+      "time_budget_hours": 8.5,
+      "fast_mode_warmup_q": 25,
+      "fast_context_pages_cap": 3,
+      "fast_max_chars_per_page_cap": 2500,
+      "fast_disable_page_stage2": true
+    }
+  },
+  "candidate_confidence_gated_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_confidence_gated_v1",
+    "description": "v7 baseline with confidence-gated 1-pass only for easy cases.",
+    "llm": {
+      "base_passes": 3,
+      "hard_passes": 3,
+      "easy_passes": 1,
+      "confidence_gate_enabled": true,
+      "easy_doc_margin": 0.12,
+      "easy_page_margin": 0.05,
+      "long_doc_hard_pages": 80
+    }
+  },
+  "candidate_hybrid_rrf_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_hybrid_rrf_v1",
+    "description": "v7 baseline with BM25 plus dense retrieval fused by reciprocal rank fusion.",
+    "retrieval": {
+      "hybrid_enabled": true,
+      "sparse_backend": "bm25",
+      "sparse_top_k": 40,
+      "hybrid_rrf_k": 60,
+      "hybrid_dense_weight": 1.0,
+      "hybrid_sparse_weight": 1.0
+    },
+    "contracts": {
+      "require_reranker": "qwen3_0_6b",
+      "require_gguf_filename": "MamayLM-Gemma-3-12B-IT-v1.0.Q4_K_M.gguf",
+      "require_n_ctx": 8192,
+      "require_bm25_backend": true
+    }
+  },
+  "candidate_extraction_blocks_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_extraction_blocks_v1",
+    "description": "v7 baseline with ordered block extraction and table-aware text recovery.",
+    "extraction": {
+      "mode": "blocks",
+      "neighbor_bleed_chars": 200,
+      "table_aware": true
+    }
+  },
+  "candidate_no_bleed_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_no_bleed_v1",
+    "description": "Faithfulness ablation with neighbor-page bleed disabled.",
+    "extraction": {
+      "neighbor_bleed_chars": 0
+    }
+  },
+  "candidate_evidence_first_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_evidence_first_v1",
+    "description": "Faithfulness ablation with answer conditioning disabled during page localization.",
+    "page_selection": {
+      "answer_conditioning": "disabled"
+    }
+  },
+  "candidate_dense_doc_lock_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_dense_doc_lock_v1",
+    "description": "Lock final doc to dense retrieval top-1 doc for ALL questions. Prevents page reranker from demoting correct docs. Dense recall@1=0.910 vs reranker final_doc recall@1=0.833 on fold1 (-7.7pp gap). Blanket lock; domain_2 loses some reranker benefit.",
+    "page_selection": {
+      "lock_to_dense_top_doc": true
+    }
+  },
+  "candidate_dense_doc_lock_v2": {
+    "inherits": "v7_baseline",
+    "name": "candidate_dense_doc_lock_v2",
+    "description": "Lock final doc to dense top-1 ONLY for long docs (>=25 pages = domain_1 proxy). All domain_1 docs have >=25 pages; 97% of domain_2 docs have <25 pages. Domain_1 analysis: reranker always hurts (-2.6pp to -13.9pp across splits). Domain_2: reranker helps in fold0 (+5.7pp) and lockbox (+3.6pp). Conditional lock: fixes domain_1 doc flips while preserving domain_2 reranker benefits.",
+    "page_selection": {
+      "lock_to_dense_top_doc": true,
+      "lock_to_dense_top_doc_min_pages": 25
+    }
+  },
+  "candidate_dense_doc_lock_v3": {
+    "inherits": "v7_baseline",
+    "name": "candidate_dense_doc_lock_v3",
+    "description": "Same as v2 but threshold=27. Fixes 3 lockbox questions (Q95, Q315, Q362) and 1 fold1 question (Q290) where domain_2 doc d80178 (26 pages) was incorrectly locked by v2's threshold=25. All domain_1 docs in dev splits have >=27 pages (min used=27 in fold0). No domain_1 gains lost.",
+    "page_selection": {
+      "lock_to_dense_top_doc": true,
+      "lock_to_dense_top_doc_min_pages": 27
+    }
+  },
+  "candidate_dense_doc_lock_v3_reranker4b_fair": {
+    "inherits": "candidate_dense_doc_lock_v3",
+    "name": "candidate_dense_doc_lock_v3_reranker4b_fair",
+    "description": "Dense doc lock v3 with the fair 4B reranker budget. Keeps the doc-lock heuristic from candidate_dense_doc_lock_v3 but swaps in qwen3_4b under the same 2048-token rerank context used by v7_baseline.",
+    "rerank": {
+      "mode": "page",
+      "model_preference": [
+        "qwen3_4b",
+        "qwen3_0_6b",
+        "bge"
+      ],
+      "max_length": 2048,
+      "batch_size": 4
+    },
+    "contracts": {
+      "require_reranker": "qwen3_4b",
+      "require_gguf_filename": "MamayLM-Gemma-3-12B-IT-v1.0.Q4_K_M.gguf",
+      "require_n_ctx": 8192
+    }
+  },
+  "candidate_v5refocus_ddl_v3_reranker4b_fair": {
+    "inherits": "candidate_dense_doc_lock_v3_reranker4b_fair",
+    "name": "candidate_v5refocus_ddl_v3_reranker4b_fair",
+    "description": "Dense doc lock v3 plus the fair 4B reranker and the v5_refocus prompt variant. This is the highest-signal balanced combination of the current doc-lock, prompt, and reranker gains.",
+    "llm": {
+      "prompt_variant": "v5_refocus"
+    }
+  },
+  "candidate_chat_template_v1": {
+    "inherits": "candidate_dense_doc_lock_v3",
+    "name": "candidate_chat_template_v1",
+    "description": "NEGATIVE: Dense doc lock v3 + chat template without system prompt. HURTS: fold0=0, fold1=-0.028. Root cause: model starts responses with Ukrainian conjunction 'А' which extract_answer maps to Latin 'A', causing 5/6 losses to switch to wrong A. DO NOT USE.",
+    "llm": {
+      "use_chat_template": true
+    }
+  },
+  "candidate_chat_template_v2": {
+    "inherits": "candidate_dense_doc_lock_v3",
+    "name": "candidate_chat_template_v2",
+    "description": "NEGATIVE: Dense doc lock v3 + chat template with system prompt. fold0=+0.002, fold1=-0.009. Still slightly worse than raw completion. Root cause: chat mode generates variable-length responses; bias depends on system prompt's last letter ('F' in v2). Raw completion with 'Правильний варіант:' is more reliable. DO NOT USE.",
+    "llm": {
+      "use_chat_template": true
+    }
+  },
+  "candidate_ddl_v3_exhaustive": {
+    "inherits": "candidate_dense_doc_lock_v3",
+    "name": "candidate_ddl_v3_exhaustive",
+    "description": "Dense doc lock v3 + exhaustive BGE-M3 page scoring within the locked domain_1 doc. Instead of only using pages in the global top-K retrieval, scores ALL pages of the locked doc by dense similarity and sorts them. Fixes cases where the answer page is missed by global top-20 retrieval (e.g., Q395: answer on page 75 of 76-page doc, never retrieved globally).",
+    "page_selection": {
+      "lock_to_dense_top_doc": true,
+      "lock_to_dense_top_doc_min_pages": 27,
+      "lock_exhaustive_dense": true
+    }
+  },
+  "candidate_v5_refocus_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_v5_refocus_v1",
+    "description": "v7 baseline with v5_refocus prompt variant: repeats the question right before 'Правильний варіант:' instead of 'Знайди відповідний фрагмент тексту'. Attention-refocusing technique for long-context MCQ. fold0=+0.0016, fold1=+0.0036, lockbox=+0.0156.",
+    "llm": {
+      "prompt_variant": "v5_refocus",
+      "top_k_context": 4,
+      "max_chars_per_page": 3500,
+      "base_passes": 3,
+      "hard_passes": 3
+    }
+  },
+  "candidate_dense_margin_lock_v1": {
+    "inherits": "v7_baseline",
+    "name": "candidate_dense_margin_lock_v1",
+    "description": "Lock final doc to dense top-1 only when the dense top-1 vs top-2 score margin exceeds 0.25. Uses retrieval confidence instead of page-count as the lock condition to reduce domain-proxy brittleness on unseen domains.",
+    "page_selection": {
+      "lock_to_dense_top_doc": true,
+      "lock_dense_by_margin_threshold": 0.25
+    }
+  },
+  "candidate_v5refocus_margin_lock_v1": {
+    "inherits": "candidate_dense_margin_lock_v1",
+    "name": "candidate_v5refocus_margin_lock_v1",
+    "description": "Dense margin lock v1 plus the v5_refocus prompt variant. Combines the safer dense-confidence doc lock with the positive prompt-only attention refocus change.",
+    "llm": {
+      "prompt_variant": "v5_refocus",
+      "top_k_context": 4,
+      "max_chars_per_page": 3500,
+      "base_passes": 3,
+      "hard_passes": 3
+    }
+  },
+  "candidate_lapalm_v1": {
+    "inherits": "candidate_dense_doc_lock_v3",
+    "name": "candidate_lapalm_v1",
+    "description": "Dense doc lock v3 with LapaLLM v0.1.2-instruct-Q4_K_M instead of MamayLM. LapaLLM is also Gemma3-12B based but fine-tuned on Ukrainian corpus with custom Ukrainian tokenizer (lapa-llm/tokenizer). Better Ukrainian tokenization may improve comprehension of Ukrainian document text. Updated March 14, 2026.",
+    "llm_model": "lapalm",
+    "contracts": {
+      "require_gguf_filename": null,
+      "require_reranker": "qwen3_0_6b",
+      "require_n_ctx": 8192
+    }
+  }
+}

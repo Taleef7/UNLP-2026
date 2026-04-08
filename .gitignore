@@ -1,0 +1,27 @@
+# Large model/data directories
+cache/
+embeddings/
+models/
+kaggle_datasets/
+local_packages/
+outputs/
+shared_task_repo/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Large binary files
+*.gguf
+*.bin
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~

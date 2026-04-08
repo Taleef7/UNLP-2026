@@ -1,0 +1,9 @@
+system_name,public_score,private_score,final_rank,local_counterpart,local_full_dev,public_delta_vs_v7,private_delta_vs_v7,notes
+v7,0.8688,0.8722,7,v7_full_dev,0.8634069432886881,0.0,0.0,Best actual competition submission and final paper anchor.
+v13,0.8231,0.8441,,candidate_v5_refocus_v1_full_dev,0.8637336984188643,-0.04569999999999996,-0.028100000000000014,Prompt-only submission that looked locally promising but regressed on the final leaderboard.
+v14,0.832,0.8396,,candidate_ddl_v3_fulldev,0.8811827671553786,-0.036800000000000055,-0.03259999999999996,Dense doc lock v3 stayed negative on Kaggle despite strong local offline evidence.
+v11,0.832,0.841,,candidate_ddl_v2_fulldev,0.8810914800982564,-0.036800000000000055,-0.031200000000000006,Dense doc lock v2 also failed to generalize despite the long-document heuristic.
+structure_doc_guard,0.8415,0.86,,candidate_structure_chunks_v2_doc_guard_full,0.881726109841001,-0.02729999999999999,-0.012199999999999989,Strong local winner that still lost decisively to the simpler v7 system in competition.
+v9,0.6716,0.7265,,v9_full_dev,0.7433625267466104,-0.19720000000000004,-0.14569999999999994,Clear negative control for the paper's failure-analysis section.
+v6_reranker,0.8618,0.8517,,candidate_stronger_reranker_v1,,-0.007000000000000006,-0.020499999999999963,"Historically strong public score, but the linked local 4B comparison remains confounded."
+v5_offline,0.8043,0.8124,,,,-0.0645,-0.059799999999999964,Early public baseline retained for leaderboard chronology.

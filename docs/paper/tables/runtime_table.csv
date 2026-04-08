@@ -1,0 +1,7 @@
+system_name,artifact,runtime_total_seconds,rerank_seconds,composite_score
+v7_baseline,v7_full_dev,1795.4593377113342,624.1173553466797,0.8634069432886881
+fair_4b,candidate_stronger_reranker_v2_fair_full_dev,3249.8089690208435,2130.9179015159607,0.8866444215133501
+dense_doc_lock_v3,candidate_ddl_v3_fulldev,1702.804037809372,578.9939336776733,0.8811827671553786
+v5_refocus,candidate_v5_refocus_v1_full_dev,1686.2120995521545,569.1907925605774,0.8637336984188643
+v5_refocus_plus_fair_4b,,,,
+triple_combo,,,,
