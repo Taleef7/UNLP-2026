@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022 - Spack) (preloaded format=pdflatex 2025.2.15)  8 APR 2026 00:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022 - Spack) (preloaded format=pdflatex 2025.2.15)  8 APR 2026 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1178,6 +1178,9 @@ Underfull \hbox (badness 2582) in paragraph at lines 5--10
  []
 
 
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+
 Underfull \hbox (badness 4859) in paragraph at lines 65--71
 \T1/ptm/m/n/10 Retrieval-augmented gen-er-a-tion for knowledge-
  []
@@ -1190,13 +1193,16 @@ Underfull \hbox (badness 3068) in paragraph at lines 98--105
 ) [6
 
 ] (./unlp2026_paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `unlp2026_paper.out' has not changed.
 (rerunfilecheck)             Checksum: 495CFD9CFE156F3862568D57037745F3;1423.
  ) 
 Here is how much of TeX's memory you used:
  33396 strings out of 478268
  796568 string characters out of 5825886
- 1217935 words of memory out of 5000000
+ 1216935 words of memory out of 5000000
  51019 multiletter control sequences out of 15000+600000
  528952 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1220,7 +1226,7 @@ ic/amsfonts/cm/cmsy8.pfb></apps/spack/gilbreth-r9/apps/texlive/20220321-gcc-11.
 tmb8a.pfb></apps/spack/gilbreth-r9/apps/texlive/20220321-gcc-11.5.0-r3rkj77/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></apps/spack/gilbreth-r9/apps/texlive/
 20220321-gcc-11.5.0-r3rkj77/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on unlp2026_paper.pdf (6 pages, 175341 bytes).
+Output written on unlp2026_paper.pdf (6 pages, 175284 bytes).
 PDF statistics:
  259 PDF objects out of 1000 (max. 8388607)
  222 compressed objects within 3 object streams
