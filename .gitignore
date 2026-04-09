@@ -7,6 +7,15 @@ local_packages/
 outputs/
 shared_task_repo/
 
+# Data artifacts (competition data — not redistributable)
+data/raw_pdfs/
+data/extracted_text/
+data/page_images/
+
+# Agent/session logs
+logs/
+.claude/
+
 # Python
 __pycache__/
 *.pyc
@@ -16,10 +25,26 @@ __pycache__/
 # Large binary files
 *.gguf
 *.bin
+*.whl
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/missfont.log
+texput.log
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Internal working files
+AGENT_HANDOFF.md
+CLAUDE.md
+configs/
+tests/
 
 # Editor
 *.swp
