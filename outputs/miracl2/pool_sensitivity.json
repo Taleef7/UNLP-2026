@@ -1,0 +1,98 @@
+{
+  "languages": [
+    "ar",
+    "bn",
+    "de",
+    "en",
+    "es",
+    "fa",
+    "fi",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "ru",
+    "sw",
+    "te",
+    "th",
+    "yo",
+    "zh"
+  ],
+  "on_dial": [
+    "native_ds_w0.98",
+    "native_ds_w0.95",
+    "native_ds_w0.90",
+    "native_ds_w0.80",
+    "native_sparse",
+    "hybrid_dw0.95",
+    "hybrid_dw0.90",
+    "hybrid_dw0.70",
+    "hybrid_dw0.50",
+    "hybrid_dw0.30",
+    "bm25_tuned"
+  ],
+  "off_dial": [
+    "ce_rerank",
+    "colbert_rerank",
+    "churn_null_f25",
+    "churn_null_f50"
+  ],
+  "pools": {
+    "on_dial_only": {
+      "n_variants": 11,
+      "n_folds": 18,
+      "flip_auc": 1.0,
+      "flip_sd": 0.0,
+      "offline_gain_auc": 0.9462962962962964,
+      "offline_gain_sd": 0.08828886993377937,
+      "flip_minus_gain": 0.05370370370370359
+    },
+    "on_dial_plus_rerankers": {
+      "n_variants": 13,
+      "n_folds": 18,
+      "flip_auc": 0.9958333333333333,
+      "flip_sd": 0.009316949906249133,
+      "offline_gain_auc": 0.9527777777777777,
+      "offline_gain_sd": 0.0772302154136547,
+      "flip_minus_gain": 0.043055555555555625
+    },
+    "full_pool": {
+      "n_variants": 15,
+      "n_folds": 18,
+      "flip_auc": 0.9637896825396824,
+      "flip_sd": 0.02072083191885457,
+      "offline_gain_auc": 0.9642857142857143,
+      "offline_gain_sd": 0.05422877130443036,
+      "flip_minus_gain": -0.0004960317460318553
+    },
+    "off_dial_only": {
+      "n_variants": 4,
+      "n_folds": 18,
+      "flip_auc": 0.6805555555555556,
+      "flip_sd": 0.13958160584890125,
+      "offline_gain_auc": 1.0,
+      "offline_gain_sd": 0.0,
+      "flip_minus_gain": -0.3194444444444444
+    }
+  },
+  "decisive_pair": {
+    "colbert_rerank": {
+      "flip": 0.23709311777657024,
+      "dndcg": 0.01326271601963136
+    },
+    "churn_null_f25": {
+      "flip": 0.24931951055090013,
+      "dndcg": -0.03438619460500117
+    },
+    "flip_gap": 0.01222639277432988,
+    "outcome_gap": 0.04764891062463253
+  },
+  "verdict": "DEAD",
+  "_provenance": {
+    "git_commit": "5b47a084f8060538ae0f92d43e438addb18a42f7",
+    "git_dirty_scripts": false,
+    "script": "a2_pool_sensitivity.py",
+    "written_utc": "2026-07-14T02:58:28+00:00"
+  }
+}

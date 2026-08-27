@@ -1,0 +1,111 @@
+\begin{thebibliography}{14}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Alzahrani et~al.(2024)Alzahrani, Alyahya, Alnumay, Alrashed,
+  Alsubaie, Almushayqih, Mirza, Alotaibi, Al-Twairesh, Alowisheq, Bari, and
+  Khan}]{alzahrani2024benchmarks}
+Alzahrani, Norah, Hisham~Abdullah Alyahya, Yazeed Alnumay, Sultan Alrashed,
+  Shaykhah Alsubaie, Yousef Almushayqih, Faisal Mirza, Nouf Alotaibi, Nora
+  Al-Twairesh, Areeb Alowisheq, M~Saiful Bari, and Haidar Khan. 2024.
+\newblock When benchmarks are targets: Revealing the sensitivity of large
+  language model leaderboards.
+\newblock In \emph{Proceedings of the Association for Computational Linguistics
+  (ACL)}.
+
+\bibitem[{Biderman et~al.(2024)Biderman, Schoelkopf, Sutawika, Gao, Tow,
+  Abbasi, Aji, Ammanamanchi, Black, Clive et~al.}]{biderman2024lessons}
+Biderman, Stella, Hailey Schoelkopf, Lintang Sutawika, Leo Gao, Jonathan Tow,
+  Baber Abbasi, Alham~Fikri Aji, Pawan~Sasanka Ammanamanchi, Sidney Black,
+  Jordan Clive, et~al. 2024.
+\newblock Lessons from the trenches on reproducible evaluation of language
+  models.
+\newblock \emph{arXiv preprint arXiv:2405.14782}.
+
+\bibitem[{Chen et~al.(2024)Chen, Xiao, Zhang, Luo, Lian, and
+  Liu}]{chen2024bgem3}
+Chen, Jianlv, Shitao Xiao, Peitian Zhang, Kun Luo, Defu Lian, and Zheng Liu.
+  2024.
+\newblock {BGE M3-Embedding}: Multi-lingual, multi-functionality,
+  multi-granularity text embeddings through self-knowledge distillation.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2024}.
+
+\bibitem[{Faysse et~al.(2025)Faysse, Sibille, Wu, Omrani, Viaud, Hudelot, and
+  Colombo}]{faysse2025colpali}
+Faysse, Manuel, Hugues Sibille, Tony Wu, Bilel Omrani, Gautier Viaud,
+  C{\'e}line Hudelot, and Pierre Colombo. 2025.
+\newblock {ColPali}: Efficient document retrieval with vision language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}.
+
+\bibitem[{Gerganov et~al.(2023)}]{llamacpp}
+Gerganov, Georgi et~al. 2023.
+\newblock {llama.cpp}: {LLM} inference in {C/C++}.
+\newblock \url{https://github.com/ggml-org/llama.cpp}.
+
+\bibitem[{He and {Thinking Machines Lab}(2025)}]{he2025nondeterminism}
+He, Horace and {Thinking Machines Lab}. 2025.
+\newblock Defeating nondeterminism in {LLM} inference.
+\newblock
+  \url{https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/}.
+
+\bibitem[{{INSAIT}(2025)}]{mamaylm2025}
+{INSAIT}. 2025.
+\newblock {MamayLM}: A ukrainian instruction-tuned language model based on
+  {Gemma-3}.
+\newblock Hugging Face model hub.
+
+\bibitem[{{llama.cpp contributors}(2023)}]{llamacpp_issue4479}
+{llama.cpp contributors}. 2023.
+\newblock Sending in tokens one at a time vs all at once gives different
+  logits.
+\newblock GitHub issue \#4479,
+  \url{https://github.com/ggml-org/llama.cpp/issues/4479}.
+
+\bibitem[{Molfese et~al.(2025)Molfese, Moroni, Gioffr{\'e}, Scir{\`e}, Conia,
+  and Navigli}]{molfese2025rightanswer}
+Molfese, Francesco~Maria, Luca Moroni, Luca Gioffr{\'e}, Alessandro Scir{\`e},
+  Simone Conia, and Roberto Navigli. 2025.
+\newblock Right answer, wrong score: Uncovering the inconsistencies of {LLM}
+  evaluation in multiple-choice question answering.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2025}, pages 18477--18494.
+
+\bibitem[{{Qwen Team}(2025)}]{qwen3_2025}
+{Qwen Team}. 2025.
+\newblock {Qwen3} technical report.
+\newblock arXiv preprint arXiv:2505.09388.
+
+\bibitem[{Sclar et~al.(2024)Sclar, Choi, Tsvetkov, and
+  Suhr}]{sclar2024formatspread}
+Sclar, Melanie, Yejin Choi, Yulia Tsvetkov, and Alane Suhr. 2024.
+\newblock Quantifying language models' sensitivity to spurious features in
+  prompt design or: How i learned to start worrying about prompt formatting.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}.
+
+\bibitem[{{UNLP 2026 Shared Task Organizers}(2026)}]{unlp2026task}
+{UNLP 2026 Shared Task Organizers}. 2026.
+\newblock {UNLP} 2026 shared task: Multi-domain ukrainian document question
+  answering.
+\newblock In \emph{Proceedings of the Ukrainian Natural Language Processing
+  Workshop (UNLP)}.
+
+\bibitem[{Zhang et~al.(2023)Zhang, Thakur, Ogundepo, Kamalloo, Alfonso-Hermelo,
+  Li, Liu, Rezagholizadeh, and Lin}]{zhang2023miracl}
+Zhang, Xinyu, Nandan Thakur, Odunayo Ogundepo, Ehsan Kamalloo, David
+  Alfonso-Hermelo, Xiaoguang Li, Qun Liu, Mehdi Rezagholizadeh, and Jimmy Lin.
+  2023.
+\newblock {MIRACL}: A multilingual retrieval dataset covering 18 diverse
+  languages.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  11:1114--1131.
+
+\bibitem[{Zheng et~al.(2024)Zheng, Zhou, Meng, Zhou, and
+  Huang}]{zheng2024selectors}
+Zheng, Chujie, Hao Zhou, Fandong Meng, Jie Zhou, and Minlie Huang. 2024.
+\newblock Large language models are not robust multiple choice selectors.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}.
+
+\end{thebibliography}

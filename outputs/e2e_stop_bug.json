@@ -1,0 +1,366 @@
+{
+  "check1_regression": {
+    "vs": "b5_g201",
+    "metrics_identical": true,
+    "answer_disagreements": 0,
+    "n": 461,
+    "pass": true
+  },
+  "check2_budget_surgical": {
+    "untruncated_that_moved": 0,
+    "pass": true
+  },
+  "check3_budget_hypothesis_applies": {
+    "truncated_in_baseline": 0,
+    "applies": false,
+    "note": "VACUOUS: nothing was ever truncated, so the budget cannot bind and its null result is not evidence about N6's tokenizer arithmetic -- only that the stop sequence fires first."
+  },
+  "check4_fix_reaches_mechanism": {
+    "cells": {
+      "e2e_b3": {
+        "n_calls": 1383,
+        "empty": 36,
+        "truncated": 0,
+        "fallback_A": 36,
+        "cyrillic_letter_answers": 0,
+        "generations_with_multiple_letters": 0,
+        "of_those_first_ne_last": 0
+      },
+      "e2e_b8": {
+        "n_calls": 1383,
+        "empty": 36,
+        "truncated": 0,
+        "fallback_A": 36,
+        "cyrillic_letter_answers": 0,
+        "generations_with_multiple_letters": 0,
+        "of_those_first_ne_last": 0
+      },
+      "e2e_fix": {
+        "n_calls": 1383,
+        "empty": 0,
+        "truncated": 6,
+        "fallback_A": 6,
+        "cyrillic_letter_answers": 0,
+        "generations_with_multiple_letters": 0,
+        "of_those_first_ne_last": 0
+      },
+      "e2e_fix64": {
+        "n_calls": 1383,
+        "empty": 0,
+        "truncated": 0,
+        "fallback_A": 6,
+        "cyrillic_letter_answers": 0,
+        "generations_with_multiple_letters": 0,
+        "of_those_first_ne_last": 0
+      }
+    },
+    "pass": true
+  },
+  "check5_residual_fallbacks_budget_bound": {
+    "fallback_A_at_budget_8": 6,
+    "fallback_A_at_budget_64": 6,
+    "truncated_at_budget_8": 6,
+    "truncated_at_budget_64": 0,
+    "generations_that_grew": 6,
+    "metrics_identical_to_budget_8": true,
+    "budget_bound": false,
+    "note": "The budget was never the binding constraint -- not at 3, not at 8, not at 64. Given 8x the room the model finishes its sentence and STILL never emits a letter: it answers by quoting the document in Ukrainian prose. This refutes N6 a second time, on its strongest test."
+  },
+  "check6_first_vs_last_hazard": {
+    "generations_with_multiple_letters": {
+      "e2e_b3": 0,
+      "e2e_b8": 0,
+      "e2e_fix": 0,
+      "e2e_fix64": 0
+    },
+    "of_those_where_first_differs_from_last": {
+      "e2e_b3": 0,
+      "e2e_b8": 0,
+      "e2e_fix": 0,
+      "e2e_fix64": 0
+    },
+    "expressed": false,
+    "note": "LATENT, NOT EXPRESSED. extract_answer takes the FIRST \\b[A-F]\\b, which is wrong for an evidence-then-answer generation. No generation in any cell contains two different letters, so the rule is never exercised. The code is still wrong; we report it as an unexpressed hazard rather than claiming it is fixed or harmless."
+  },
+  "check7_homoglyph_hypothesis": {
+    "prefix_cyrillic_hits": {
+      "e2e_b3": 0,
+      "e2e_b8": 0,
+      "e2e_fix": 0,
+      "e2e_fix64": 0
+    },
+    "total_calls_across_cells": 5532,
+    "occurs": false,
+    "note": "NULL. Plan Step 5.2 proposed the homoglyph experiment as one of two pillars of the 'language-correlated' framing: MamayLM emits Cyrillic \u0410/\u0412/\u0421/\u0415, the Latin-only parser misses it, accuracy silently drops. It does not happen -- 0 hits in every cell. The hypothesis is dead and we report it as a null."
+  },
+  "check8_warm_cache_signature": {
+    "per_cell": {
+      "e2e_b3": {
+        "c2_vs_c3_disagree": 0,
+        "c1_differs_from_c2": 4,
+        "n_questions": 461
+      },
+      "e2e_b8": {
+        "c2_vs_c3_disagree": 0,
+        "c1_differs_from_c2": 4,
+        "n_questions": 461
+      },
+      "e2e_fix": {
+        "c2_vs_c3_disagree": 0,
+        "c1_differs_from_c2": 4,
+        "n_questions": 461
+      },
+      "e2e_fix64": {
+        "c2_vs_c3_disagree": 0,
+        "c1_differs_from_c2": 4,
+        "n_questions": 461
+      }
+    },
+    "prediction_holds": true,
+    "note": "Calls 2 and 3 never once disagree, in any cell. They are not independent samples -- they are numerically identical twins produced by the same warm-cache code path, while call 1 takes a different one. The three 'votes' are not three draws from one distribution."
+  },
+  "check9_vote_integrity": {
+    "e2e_b3": {
+      "vote_overruled_call1": 4,
+      "vote_was_right": 0,
+      "vote_destroyed_a_correct_answer": 1,
+      "accuracy_3vote": 0.8806941431670282,
+      "accuracy_call1_only": 0.8828633405639913,
+      "delta_pp_of_dropping_the_vote": 0.2169197396963085
+    },
+    "e2e_b8": {
+      "vote_overruled_call1": 4,
+      "vote_was_right": 0,
+      "vote_destroyed_a_correct_answer": 1,
+      "accuracy_3vote": 0.8806941431670282,
+      "accuracy_call1_only": 0.8828633405639913,
+      "delta_pp_of_dropping_the_vote": 0.2169197396963085
+    },
+    "e2e_fix": {
+      "vote_overruled_call1": 1,
+      "vote_was_right": 0,
+      "vote_destroyed_a_correct_answer": 1,
+      "accuracy_3vote": 0.8850325379609545,
+      "accuracy_call1_only": 0.8872017353579176,
+      "delta_pp_of_dropping_the_vote": 0.2169197396963085
+    },
+    "e2e_fix64": {
+      "vote_overruled_call1": 1,
+      "vote_was_right": 0,
+      "vote_destroyed_a_correct_answer": 1,
+      "accuracy_3vote": 0.8850325379609545,
+      "accuracy_call1_only": 0.8872017353579176,
+      "delta_pp_of_dropping_the_vote": 0.2169197396963085
+    },
+    "note": "READ THE RETRACTION BELOW BEFORE USING THESE NUMBERS. The 'call-1 only' column here treats call 1 as the model's true greedy answer. IT IS NOT. e2e_reset proved call 1 is ITSELF a prefix-cache hit against the PREVIOUS question's prompt, so it is contaminated too -- just differently. The clean single-greedy-call baseline is e2e_reset, not this column.",
+    "RETRACTED_CLAIM": {
+      "claim": "On qid 408 the vote DESTROYED A CORRECT ANSWER: the model said F, gold is F, and the two warm-cache calls said A, so A won 2-1.",
+      "status": "WRONG. RETRACTED 2026-07-14 by e2e_reset.",
+      "why": "Call 1's ' F' was not the model's belief -- it was a cache artifact. With a TRUE reset the model answers ' A' on all three calls (gold F) and is simply wrong. There was no correct answer to destroy. We mistook numerical noise for the model's real answer, which is the same error, in miniature, that this whole paper is about.",
+      "what_survives": "The three calls DO diverge from a byte-identical prompt (461/461 -> identical only after a true reset), and calls 2-3 always agree (0/1844). The MECHANISM in N5 is confirmed. What does not survive is the claim that the vote destroyed a correct answer, and the claim that dropping the vote buys +0.22pp."
+    }
+  },
+  "fallback_counterfactual": {
+    "e2e_b3": {
+      "questions_decided_by_a_fallback": 13,
+      "of_those_right_by_luck": 2,
+      "reported_answer_accuracy": 0.8806941431670282,
+      "if_fallbacks_abstained": 0.8763557483731019,
+      "manufactured_pp": 0.43383947939262474
+    },
+    "e2e_b8": {
+      "questions_decided_by_a_fallback": 13,
+      "of_those_right_by_luck": 2,
+      "reported_answer_accuracy": 0.8806941431670282,
+      "if_fallbacks_abstained": 0.8763557483731019,
+      "manufactured_pp": 0.43383947939262474
+    },
+    "e2e_fix": {
+      "questions_decided_by_a_fallback": 2,
+      "of_those_right_by_luck": 1,
+      "reported_answer_accuracy": 0.8850325379609545,
+      "if_fallbacks_abstained": 0.8828633405639913,
+      "manufactured_pp": 0.21691973969631237
+    },
+    "e2e_fix64": {
+      "questions_decided_by_a_fallback": 2,
+      "of_those_right_by_luck": 1,
+      "reported_answer_accuracy": 0.8850325379609545,
+      "if_fallbacks_abstained": 0.8828633405639913,
+      "manufactured_pp": 0.21691973969631237
+    }
+  },
+  "vs_shipped": {
+    "e2e_b8": {
+      "delta_answer": 0.0,
+      "delta_composite": 0.0,
+      "mcnemar": {
+        "wins": 0,
+        "losses": 0,
+        "exact_p": 1.0
+      }
+    },
+    "e2e_fix": {
+      "delta_answer": 0.004338394793926281,
+      "delta_composite": 0.0016906979711623915,
+      "mcnemar": {
+        "wins": 2,
+        "losses": 0,
+        "exact_p": 0.5
+      }
+    },
+    "e2e_fix64": {
+      "delta_answer": 0.004338394793926281,
+      "delta_composite": 0.0016906979711623915,
+      "mcnemar": {
+        "wins": 2,
+        "losses": 0,
+        "exact_p": 0.5
+      }
+    }
+  },
+  "check10_prereg_reset": {
+    "hard_P1_all_identical": {
+      "identical": 461,
+      "n": 461,
+      "still_disagreeing": [],
+      "pass": true
+    },
+    "hard_P2_known_disagreers_collapse": {
+      "qids": [
+        "62",
+        "237",
+        "408",
+        "447"
+      ],
+      "pass": true
+    },
+    "med_P3_qid408": {
+      "expected": "F",
+      "got": "A",
+      "pass": false
+    },
+    "soft_P4_answer_accuracy": {
+      "expected": 0.8872017353579176,
+      "got": 0.8828633405639913,
+      "pass": false,
+      "note": "a MISS does not falsify: a true reset also re-evaluates call 1, whose answers may themselves move"
+    },
+    "soft_P5_fallback_A": {
+      "expected": 6,
+      "got": 3,
+      "pass": false
+    },
+    "surgical_doc_accuracy_unchanged": {
+      "expected": 0.9327548806941431,
+      "got": 0.9327548806941431,
+      "pass": true
+    },
+    "metrics": {
+      "answer_accuracy": 0.8828633405639913,
+      "doc_accuracy": 0.9327548806941431,
+      "page_proximity": 0.8272091258634836,
+      "composite_score": 0.8814226719214029
+    },
+    "vs_fix": {
+      "answer_accuracy": -0.002169197396963196,
+      "doc_accuracy": 0.0,
+      "page_proximity": 0.00014461315979741318,
+      "composite_score": -0.001048445408532106
+    },
+    "hypothesis_confirmed": true,
+    "verdict": "CONFIRMED: a true reset makes the three identical greedy calls return identical text. The prefix-cache hit at llama.py:882 was the cause."
+  },
+  "the_ladder": {
+    "e2e_b3": {
+      "correct": 406,
+      "n": 461,
+      "answer_accuracy": 0.8806941431670282,
+      "composite": 0.8807804193587726,
+      "decided_by_blind_A": 13,
+      "right_by_luck": 2,
+      "honest_if_abstained": 0.8763557483731019,
+      "note": "shipped: BOTH bugs"
+    },
+    "e2e_fix": {
+      "correct": 408,
+      "n": 461,
+      "answer_accuracy": 0.8850325379609545,
+      "composite": 0.882471117329935,
+      "decided_by_blind_A": 2,
+      "right_by_luck": 1,
+      "honest_if_abstained": 0.8828633405639913,
+      "note": "stop fixed; the cache bug REMAINS"
+    },
+    "e2e_reset": {
+      "correct": 407,
+      "n": 461,
+      "answer_accuracy": 0.8828633405639913,
+      "composite": 0.8814226719214029,
+      "decided_by_blind_A": 1,
+      "right_by_luck": 1,
+      "honest_if_abstained": 0.8806941431670282,
+      "note": "both fixed -- the CLEAN system"
+    },
+    "interpretation": "Fixing the cache bug COSTS us 1 question(s): 408 -> 407 of 461. The numerical nondeterminism was NET-FAVOURABLE to our score. Both bugs were manufacturing accuracy, and the fully corrected system scores LOWER than the half-corrected one. This is the honest result and it is the one we report. The clean system still beats the shipped one (407 vs 406 correct), but it beats it by less than the half-fix appeared to, and for a reason that has nothing to do with the model getting better: we stopped guessing, and we stopped letting arithmetic noise vote.",
+    "vote_is_now_a_provable_no_op": "In e2e_reset all three calls return IDENTICAL text on 461/461 questions. At vote_temp=0 the 3-pass vote is therefore EXACTLY a no-op -- not 'unhelpful', but mathematically incapable of changing any answer -- while costing 3x the inference. That is a logical identity given P1, and it REPLACES the earlier (wrong) claim that dropping the vote buys +0.22pp."
+  },
+  "cells": {
+    "e2e_b3": {
+      "answer_accuracy": 0.8806941431670282,
+      "doc_accuracy": 0.9327548806941431,
+      "page_proximity": 0.8289785104068887,
+      "composite_score": 0.8807804193587726
+    },
+    "e2e_b8": {
+      "answer_accuracy": 0.8806941431670282,
+      "doc_accuracy": 0.9327548806941431,
+      "page_proximity": 0.8289785104068887,
+      "composite_score": 0.8807804193587726
+    },
+    "e2e_fix": {
+      "answer_accuracy": 0.8850325379609545,
+      "doc_accuracy": 0.9327548806941431,
+      "page_proximity": 0.8270645127036862,
+      "composite_score": 0.882471117329935
+    },
+    "e2e_fix64": {
+      "answer_accuracy": 0.8850325379609545,
+      "doc_accuracy": 0.9327548806941431,
+      "page_proximity": 0.8270645127036862,
+      "composite_score": 0.882471117329935
+    },
+    "e2e_reset": {
+      "answer_accuracy": 0.8828633405639913,
+      "doc_accuracy": 0.9327548806941431,
+      "page_proximity": 0.8272091258634836,
+      "composite_score": 0.8814226719214029
+    }
+  },
+  "sigma_note": "vote_temp=0 => sigma exactly 0 (B5 GATE 2: 0/461 churn across seeds). Deltas are real, not noise.",
+  "_provenance": {
+    "git_commit": "dd4cb09c5d7f762173efb5ef7f214571923e1c04",
+    "git_dirty_scripts": false,
+    "script": "e2e_analyze.py",
+    "written_utc": "2026-07-14T19:26:42+00:00",
+    "inputs": {
+      "outputs/benchmarks/e2e_b3/summary.json": "261905e0a7e73313",
+      "outputs/benchmarks/e2e_b3/answer_trace.json": "ed9e30e6dba630ee",
+      "outputs/benchmarks/e2e_b3/per_question.csv": "709dc71674b1fb1e",
+      "outputs/benchmarks/e2e_b8/summary.json": "1fc9a6de3a7aa7a9",
+      "outputs/benchmarks/e2e_b8/answer_trace.json": "b8c7020bee579233",
+      "outputs/benchmarks/e2e_b8/per_question.csv": "709dc71674b1fb1e",
+      "outputs/benchmarks/e2e_fix/summary.json": "ee32255058c52cab",
+      "outputs/benchmarks/e2e_fix/answer_trace.json": "66d89f6a0957a0f9",
+      "outputs/benchmarks/e2e_fix/per_question.csv": "3875d6d7d149d103",
+      "outputs/benchmarks/e2e_fix64/summary.json": "88e4542da5940174",
+      "outputs/benchmarks/e2e_fix64/answer_trace.json": "5fc05b02ea81c240",
+      "outputs/benchmarks/e2e_fix64/per_question.csv": "3875d6d7d149d103",
+      "outputs/benchmarks/e2e_reset/summary.json": "ef7095f64cec4768",
+      "outputs/benchmarks/e2e_reset/answer_trace.json": "a915a922127c0363",
+      "outputs/benchmarks/e2e_reset/per_question.csv": "aae2e243c6982138",
+      "outputs/benchmarks/b5_g201/summary.json": "1c80f062a019a096",
+      "outputs/benchmarks/b5_g201/per_question.csv": "709dc71674b1fb1e"
+    }
+  }
+}

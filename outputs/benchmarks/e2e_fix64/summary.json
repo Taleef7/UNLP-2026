@@ -1,0 +1,233 @@
+{
+  "preset": "v7_baseline",
+  "description": "Scored recovery baseline. Page-level rerank with answer-aware page selection.",
+  "reference_kaggle_score": 0.8688,
+  "n_questions": 461,
+  "reranker_name": "qwen3_0_6b",
+  "llm_n_ctx": 8192,
+  "run_info": {
+    "config_hash": "33e39d777f3da3c69a8dac33b3ca5127a6ce561f",
+    "git_commit": "f779ad2b8fdbb1a24bad6d1329acfef8a64a5257",
+    "hardware_tag": "gpu",
+    "fallback_count": 0
+  },
+  "diagnostics": {
+    "doc_rerank_skipped": 0,
+    "doc_rerank_changed": 0,
+    "doc_guard_changed": 0,
+    "easy_pass_count": 0,
+    "hard_pass_count": 0,
+    "page_stage2_count": 0,
+    "fast_mode_triggered_at": null,
+    "projected_total_seconds": null,
+    "gpu_memory_snapshots": [],
+    "reranker_teardown_performed": false,
+    "lazy_segment_docs": 0,
+    "lazy_segment_pages": 0,
+    "lazy_segment_segments": 0,
+    "structure_chunk_docs": 0,
+    "structure_chunk_pages": 0,
+    "structure_chunk_segments": 0,
+    "fallback_count": 0
+  },
+  "timings": {
+    "extract_seconds": 4.584736347198486,
+    "retrieval_seconds": 34.995546102523804,
+    "rerank_seconds": 87.45251607894897,
+    "mcq_seconds": 1142.6882936954498,
+    "questions": 461
+  },
+  "answer_accuracy": 0.8850325379609545,
+  "doc_accuracy": 0.9327548806941431,
+  "page_proximity": 0.8270645127036862,
+  "composite_score": 0.882471117329935,
+  "per_domain": {
+    "domain_1": {
+      "n": 198,
+      "answer_acc": 0.8686868686868687,
+      "doc_acc": 0.9747474747474747,
+      "page_prox": 0.8647288092116372,
+      "composite": 0.8942125053332123
+    },
+    "domain_2": {
+      "n": 263,
+      "answer_acc": 0.8973384030418251,
+      "doc_acc": 0.9011406844106464,
+      "page_prox": 0.7987088826330608,
+      "composite": 0.873631593281839
+    }
+  },
+  "ir_metrics": {
+    "n_questions": 461,
+    "stages": {
+      "dense_doc": {
+        "mrr": 0.9551931618634438,
+        "ndcg": 0.9651273105878238,
+        "found_rate": 0.9956616052060737,
+        "mean_rank_found": 1.1546840958605664,
+        "median_rank_found": 1.0,
+        "recall_at_1": 0.9327548806941431,
+        "recall_at_3": 0.9718004338394793,
+        "recall_at_5": 0.9869848156182213,
+        "recall_at_10": 0.9956616052060737
+      },
+      "final_doc": {
+        "mrr": 0.9551931618634438,
+        "ndcg": 0.9651273105878238,
+        "found_rate": 0.9956616052060737,
+        "mean_rank_found": 1.1546840958605664,
+        "median_rank_found": 1.0,
+        "recall_at_1": 0.9327548806941431,
+        "recall_at_3": 0.9718004338394793,
+        "recall_at_5": 0.9869848156182213,
+        "recall_at_10": 0.9956616052060737
+      },
+      "dense_page": {
+        "mrr": 0.591341062210017,
+        "ndcg": 0.6543094630756627,
+        "found_rate": 0.8590021691973969,
+        "mean_rank_found": 2.9393939393939394,
+        "median_rank_found": 1.0,
+        "recall_at_1": 0.4642082429501085,
+        "recall_at_3": 0.6919739696312365,
+        "recall_at_5": 0.7440347071583514,
+        "recall_at_10": 0.7982646420824295,
+        "page_proximity_at_1": 0.8192527262614733,
+        "page_proximity_at_3": 0.9151430262010938,
+        "page_proximity_at_5": 0.9372365480434606,
+        "page_proximity_at_10": 0.9589817604458629
+      },
+      "final_page": {
+        "mrr": 0.591341062210017,
+        "ndcg": 0.6543094630756627,
+        "found_rate": 0.8590021691973969,
+        "mean_rank_found": 2.9393939393939394,
+        "median_rank_found": 1.0,
+        "recall_at_1": 0.4642082429501085,
+        "recall_at_3": 0.6919739696312365,
+        "recall_at_5": 0.7440347071583514,
+        "recall_at_10": 0.7982646420824295,
+        "page_proximity_at_1": 0.8192527262614733,
+        "page_proximity_at_3": 0.9151430262010938,
+        "page_proximity_at_5": 0.9372365480434606,
+        "page_proximity_at_10": 0.9589817604458629
+      }
+    },
+    "per_domain": {
+      "domain_1": {
+        "n_questions": 198,
+        "stages": {
+          "dense_doc": {
+            "mrr": 0.9837542087542087,
+            "ndcg": 0.9877746912750041,
+            "found_rate": 1.0,
+            "mean_rank_found": 1.0555555555555556,
+            "median_rank_found": 1.0,
+            "recall_at_1": 0.9747474747474747,
+            "recall_at_3": 0.98989898989899,
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0
+          },
+          "final_doc": {
+            "mrr": 0.9837542087542087,
+            "ndcg": 0.9877746912750041,
+            "found_rate": 1.0,
+            "mean_rank_found": 1.0555555555555556,
+            "median_rank_found": 1.0,
+            "recall_at_1": 0.9747474747474747,
+            "recall_at_3": 0.98989898989899,
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0
+          },
+          "dense_page": {
+            "mrr": 0.4907589975548977,
+            "ndcg": 0.5660033531060568,
+            "found_rate": 0.8131313131313131,
+            "mean_rank_found": 3.608695652173913,
+            "median_rank_found": 2.0,
+            "recall_at_1": 0.3484848484848485,
+            "recall_at_3": 0.6111111111111112,
+            "recall_at_5": 0.6666666666666666,
+            "recall_at_10": 0.7373737373737373,
+            "page_proximity_at_1": 0.8596577431923674,
+            "page_proximity_at_3": 0.9356589662106808,
+            "page_proximity_at_5": 0.9544595027865298,
+            "page_proximity_at_10": 0.9819405814538528
+          },
+          "final_page": {
+            "mrr": 0.4907589975548977,
+            "ndcg": 0.5660033531060568,
+            "found_rate": 0.8131313131313131,
+            "mean_rank_found": 3.608695652173913,
+            "median_rank_found": 2.0,
+            "recall_at_1": 0.3484848484848485,
+            "recall_at_3": 0.6111111111111112,
+            "recall_at_5": 0.6666666666666666,
+            "recall_at_10": 0.7373737373737373,
+            "page_proximity_at_1": 0.8596577431923674,
+            "page_proximity_at_3": 0.9356589662106808,
+            "page_proximity_at_5": 0.9544595027865298,
+            "page_proximity_at_10": 0.9819405814538528
+          }
+        }
+      },
+      "domain_2": {
+        "n_questions": 263,
+        "stages": {
+          "dense_doc": {
+            "mrr": 0.93369092884302,
+            "ndcg": 0.9480771912872079,
+            "found_rate": 0.9923954372623575,
+            "mean_rank_found": 1.2298850574712643,
+            "median_rank_found": 1.0,
+            "recall_at_1": 0.9011406844106464,
+            "recall_at_3": 0.9581749049429658,
+            "recall_at_5": 0.9771863117870723,
+            "recall_at_10": 0.9923954372623575
+          },
+          "final_doc": {
+            "mrr": 0.93369092884302,
+            "ndcg": 0.9480771912872079,
+            "found_rate": 0.9923954372623575,
+            "mean_rank_found": 1.2298850574712643,
+            "median_rank_found": 1.0,
+            "recall_at_1": 0.9011406844106464,
+            "recall_at_3": 0.9581749049429658,
+            "recall_at_5": 0.9771863117870723,
+            "recall_at_10": 0.9923954372623575
+          },
+          "dense_page": {
+            "mrr": 0.6670644416842134,
+            "ndcg": 0.7207908690603839,
+            "found_rate": 0.8935361216730038,
+            "mean_rank_found": 2.480851063829787,
+            "median_rank_found": 1.0,
+            "recall_at_1": 0.5513307984790875,
+            "recall_at_3": 0.752851711026616,
+            "recall_at_5": 0.8022813688212928,
+            "recall_at_10": 0.844106463878327,
+            "page_proximity_at_1": 0.7888337401309892,
+            "page_proximity_at_3": 0.8996975656615559,
+            "page_proximity_at_5": 0.9242702170962068,
+            "page_proximity_at_10": 0.941697172766844
+          },
+          "final_page": {
+            "mrr": 0.6670644416842134,
+            "ndcg": 0.7207908690603839,
+            "found_rate": 0.8935361216730038,
+            "mean_rank_found": 2.480851063829787,
+            "median_rank_found": 1.0,
+            "recall_at_1": 0.5513307984790875,
+            "recall_at_3": 0.752851711026616,
+            "recall_at_5": 0.8022813688212928,
+            "recall_at_10": 0.844106463878327,
+            "page_proximity_at_1": 0.7888337401309892,
+            "page_proximity_at_3": 0.8996975656615559,
+            "page_proximity_at_5": 0.9242702170962068,
+            "page_proximity_at_10": 0.941697172766844
+          }
+        }
+      }
+    }
+  }
+}

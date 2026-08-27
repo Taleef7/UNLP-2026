@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# local data, model, and embedding stores
+data/raw_pdfs/
+models/
+cache/
+embeddings/
+*.npz
+*.npy
+# except the small embedding cache that an artifact declares as an input
+!outputs/retrieval_eval/unlp_embs.npz
+
+# LaTeX build intermediates
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg

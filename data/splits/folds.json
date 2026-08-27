@@ -1,0 +1,529 @@
+{
+  "folds": [
+    {
+      "fold_index": 0,
+      "train_doc_ids": [
+        "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+        "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+        "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+        "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+        "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+        "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+        "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+        "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+        "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+        "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+        "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+        "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+        "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+        "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+        "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+        "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+        "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+        "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+        "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+        "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+        "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+        "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+        "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+        "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+        "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+        "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf",
+        "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+      ],
+      "val_doc_ids": [
+        "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+        "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+        "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+        "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+        "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+        "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf"
+      ],
+      "train_summary": {
+        "doc_count": 27,
+        "question_count": 293,
+        "doc_ids": [
+          "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+          "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+          "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+          "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+          "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+          "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+          "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+          "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+          "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+          "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+          "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+          "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+          "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+          "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+          "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+          "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+          "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+          "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+          "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+          "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+          "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+          "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+          "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+          "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+          "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+          "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf",
+          "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+        ],
+        "domain_counts": {
+          "domain_1": 7,
+          "domain_2": 20
+        },
+        "length_bucket_counts": {
+          "q4": 6,
+          "q3": 7,
+          "q2": 7,
+          "q1": 7
+        }
+      },
+      "val_summary": {
+        "doc_count": 6,
+        "question_count": 73,
+        "doc_ids": [
+          "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+          "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+          "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+          "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+          "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+          "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf"
+        ],
+        "domain_counts": {
+          "domain_1": 2,
+          "domain_2": 4
+        },
+        "length_bucket_counts": {
+          "q3": 1,
+          "q1": 2,
+          "q4": 1,
+          "q2": 2
+        }
+      }
+    },
+    {
+      "fold_index": 1,
+      "train_doc_ids": [
+        "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+        "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+        "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+        "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+        "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+        "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+        "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+        "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+        "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+        "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+        "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+        "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+        "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+        "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+        "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+        "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+        "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+        "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+        "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+        "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+        "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+        "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+        "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+        "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+        "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+        "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf"
+      ],
+      "val_doc_ids": [
+        "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+        "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+        "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+        "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+        "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+        "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+        "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+      ],
+      "train_summary": {
+        "doc_count": 26,
+        "question_count": 288,
+        "doc_ids": [
+          "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+          "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+          "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+          "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+          "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+          "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+          "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+          "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+          "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+          "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+          "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+          "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+          "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+          "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+          "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+          "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+          "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+          "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+          "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+          "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+          "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+          "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+          "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+          "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+          "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+          "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf"
+        ],
+        "domain_counts": {
+          "domain_1": 7,
+          "domain_2": 19
+        },
+        "length_bucket_counts": {
+          "q4": 5,
+          "q3": 7,
+          "q2": 7,
+          "q1": 7
+        }
+      },
+      "val_summary": {
+        "doc_count": 7,
+        "question_count": 78,
+        "doc_ids": [
+          "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+          "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+          "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+          "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+          "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+          "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+          "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+        ],
+        "domain_counts": {
+          "domain_1": 2,
+          "domain_2": 5
+        },
+        "length_bucket_counts": {
+          "q4": 2,
+          "q2": 2,
+          "q3": 1,
+          "q1": 2
+        }
+      }
+    },
+    {
+      "fold_index": 2,
+      "train_doc_ids": [
+        "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+        "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+        "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+        "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+        "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+        "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+        "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+        "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+        "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+        "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+        "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+        "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+        "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+        "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+        "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+        "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+        "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+        "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+        "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+        "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+        "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+        "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+        "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+        "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+        "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf",
+        "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+      ],
+      "val_doc_ids": [
+        "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+        "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+        "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+        "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+        "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+        "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+        "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf"
+      ],
+      "train_summary": {
+        "doc_count": 26,
+        "question_count": 293,
+        "doc_ids": [
+          "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+          "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+          "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+          "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+          "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+          "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+          "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+          "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+          "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+          "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+          "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+          "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+          "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+          "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+          "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+          "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+          "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+          "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+          "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+          "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+          "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+          "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+          "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+          "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+          "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf",
+          "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+        ],
+        "domain_counts": {
+          "domain_1": 7,
+          "domain_2": 19
+        },
+        "length_bucket_counts": {
+          "q4": 6,
+          "q3": 6,
+          "q2": 7,
+          "q1": 7
+        }
+      },
+      "val_summary": {
+        "doc_count": 7,
+        "question_count": 73,
+        "doc_ids": [
+          "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+          "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+          "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+          "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+          "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+          "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+          "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf"
+        ],
+        "domain_counts": {
+          "domain_2": 5,
+          "domain_1": 2
+        },
+        "length_bucket_counts": {
+          "q1": 2,
+          "q3": 2,
+          "q2": 2,
+          "q4": 1
+        }
+      }
+    },
+    {
+      "fold_index": 3,
+      "train_doc_ids": [
+        "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+        "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+        "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+        "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+        "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+        "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+        "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+        "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+        "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+        "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+        "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+        "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+        "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+        "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+        "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+        "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+        "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+        "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+        "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+        "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+        "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+        "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+        "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+        "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+        "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+        "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+      ],
+      "val_doc_ids": [
+        "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+        "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+        "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+        "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+        "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+        "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+        "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf"
+      ],
+      "train_summary": {
+        "doc_count": 26,
+        "question_count": 287,
+        "doc_ids": [
+          "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+          "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+          "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+          "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+          "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+          "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+          "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+          "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+          "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+          "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+          "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+          "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+          "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+          "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+          "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+          "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+          "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+          "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+          "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+          "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+          "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+          "fb285f08989b559f0080c9dd096d3557860f919d.pdf",
+          "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+          "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+          "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+          "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+        ],
+        "domain_counts": {
+          "domain_1": 7,
+          "domain_2": 19
+        },
+        "length_bucket_counts": {
+          "q4": 5,
+          "q3": 6,
+          "q2": 7,
+          "q1": 8
+        }
+      },
+      "val_summary": {
+        "doc_count": 7,
+        "question_count": 79,
+        "doc_ids": [
+          "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+          "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+          "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+          "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+          "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+          "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+          "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf"
+        ],
+        "domain_counts": {
+          "domain_2": 5,
+          "domain_1": 2
+        },
+        "length_bucket_counts": {
+          "q2": 2,
+          "q4": 2,
+          "q3": 2,
+          "q1": 1
+        }
+      }
+    },
+    {
+      "fold_index": 4,
+      "train_doc_ids": [
+        "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+        "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+        "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+        "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+        "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+        "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+        "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+        "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+        "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+        "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+        "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+        "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+        "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+        "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+        "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+        "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+        "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+        "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+        "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+        "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+        "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+        "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+        "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+        "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+        "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+        "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf",
+        "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+      ],
+      "val_doc_ids": [
+        "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+        "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+        "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+        "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+        "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+        "fb285f08989b559f0080c9dd096d3557860f919d.pdf"
+      ],
+      "train_summary": {
+        "doc_count": 27,
+        "question_count": 303,
+        "doc_ids": [
+          "a066d97ba4ff355ede19dabfdf01860cfa04a6de.pdf",
+          "54a634188fe502d79e2653231c8ea286636142a0.pdf",
+          "cadef3fc7594662353b7c94387b63a926b5d92d3.pdf",
+          "61990b93694d93444332fc6fa6a0f837ee312bdb.pdf",
+          "759dfc8486c0f02391d7cfc1fed753b0608fc601.pdf",
+          "72e790ea927cb79b08838bcd0e290c83fd4f6e06.pdf",
+          "41b8a1637eea9e8acb06eef16b1c2479e37e759c.pdf",
+          "ac85a12a4483579ba8f51197b5c8ace05f5397e0.pdf",
+          "828b7ab8d9ead3e6f25ce173cd6f03cce5c800c1.pdf",
+          "2ee44110e9b8b4b6f0e41ef9c8cc553be744551b.pdf",
+          "f8e8ea2b7e82798862bc3d7b2753f2262642d889.pdf",
+          "fc5f5d668b03d9b606779484d465efcb4436a6be.pdf",
+          "51fc038fd5ddeade0c2c261e2b56508b287bab98.pdf",
+          "7db5015ac19c3cd7bb04118b38a228b3572a358c.pdf",
+          "d80178b24cc3a40d841ec790e575767afd0a3fd9.pdf",
+          "5c75a2eb4814242f35871112bc657e36f813674b.pdf",
+          "986dbec74e7ac870dfcf8b14337b301227c61238.pdf",
+          "f548cde5ba56c4e1d8aeca95c3e190f2711d6fa1.pdf",
+          "5ae9814fac3ba1f5048ce716f15304d3ead03823.pdf",
+          "780fd55597cd81f1cf0d1492926ab69cfb115d89.pdf",
+          "114aa3c7890f255d1134a31a22a29caae427a6f1.pdf",
+          "cc340c81af3efa6ad4f864b38c4b1c497562df63.pdf",
+          "67bfbcbe3cfd8f845785a8664b9b73b6b4751d72.pdf",
+          "2827fbd42bc74ef48ac74ef40b90868b94b1da79.pdf",
+          "3828dec85bc546bd064190a023c7c802d6a8ab0a.pdf",
+          "9d2df2f02cd5d57fe401497c3e64e47a3994112d.pdf",
+          "a8bf09b126fb7c9072a5a54c3c0aaa5df7968ea4.pdf"
+        ],
+        "domain_counts": {
+          "domain_1": 8,
+          "domain_2": 19
+        },
+        "length_bucket_counts": {
+          "q4": 6,
+          "q3": 6,
+          "q2": 8,
+          "q1": 7
+        }
+      },
+      "val_summary": {
+        "doc_count": 6,
+        "question_count": 63,
+        "doc_ids": [
+          "20e086e7585d5e496d67ed2313ceb5aa53b409b5.pdf",
+          "0ec2a844ab5e5f66bfff7d66dbd5b33bca34cc94.pdf",
+          "556be4e553eab6942598e58cfa02b6aaa553a0e5.pdf",
+          "1026d4282a0fb8d22694301adc83729950c8498b.pdf",
+          "60f2d879c17e5e6967e40c2315b8d46a987bda47.pdf",
+          "fb285f08989b559f0080c9dd096d3557860f919d.pdf"
+        ],
+        "domain_counts": {
+          "domain_2": 5,
+          "domain_1": 1
+        },
+        "length_bucket_counts": {
+          "q3": 2,
+          "q4": 1,
+          "q1": 2,
+          "q2": 1
+        }
+      }
+    }
+  ]
+}

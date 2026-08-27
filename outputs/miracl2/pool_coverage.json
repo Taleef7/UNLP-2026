@@ -1,0 +1,29 @@
+{
+  "ru": {
+    "n_docs": 219114,
+    "n_queries": 1000,
+    "n_gold": 2750,
+    "n_gold_present": 2750,
+    "gold_coverage": 1.0,
+    "queries_with_any_gold": 1000,
+    "frac_queries_answerable": 1.0
+  },
+  "yo": {
+    "n_docs": 49043,
+    "n_queries": 119,
+    "n_gold": 140,
+    "n_gold_present": 140,
+    "gold_coverage": 1.0,
+    "queries_with_any_gold": 119,
+    "frac_queries_answerable": 1.0
+  },
+  "sw": {
+    "n_docs": 131924,
+    "n_queries": 482,
+    "n_gold": 758,
+    "n_gold_present": 758,
+    "gold_coverage": 1.0,
+    "queries_with_any_gold": 482,
+    "frac_queries_answerable": 1.0
+  }
+}

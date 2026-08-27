@@ -1,0 +1,26 @@
+{
+  "doc_ids": [
+    "b59848334218c38574465a72b75d6b4744bb985f.pdf",
+    "31e80927922c1ffb86a2fcf32c073097d8f4ac72.pdf",
+    "4e779acee13fa6e0763fb33d1c83030b8e6ea33d.pdf",
+    "f4539bc3a79016285524705e25fee5a8d523db3d.pdf",
+    "1caa31f28b0feabbe319d352bf58cb08adcc4dc8.pdf",
+    "b0e35f26831baa753925da047ca36d318a100825.pdf",
+    "60d1bee90467207fbbac980b346b932229542c73.pdf",
+    "aba537442395c1a4ca13d05e378a49a47865cc46.pdf"
+  ],
+  "summary": {
+    "doc_count": 8,
+    "question_count": 95,
+    "domain_counts": {
+      "domain_1": 2,
+      "domain_2": 6
+    },
+    "bucket_counts": {
+      "q1": 2,
+      "q2": 2,
+      "q3": 3,
+      "q4": 1
+    }
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "budgets": {
+    "completion path (max_tokens=3)": 3,
+    "chat path (max_tokens=4)": 4
+  },
+  "models": {
+    "MamayLM-Gemma-3-12B-IT-v1.0": {
+      "rows": {
+        "English": {
+          "script": "Latin",
+          "slot": "Answer: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Ukrainian": {
+          "script": "Cyrillic",
+          "slot": "Відповідь: А",
+          "tokens_bare": 1,
+          "tokens_slot": 5,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Russian": {
+          "script": "Cyrillic",
+          "slot": "Ответ: А",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "German": {
+          "script": "Latin",
+          "slot": "Antwort: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "French": {
+          "script": "Latin",
+          "slot": "Réponse : A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Spanish": {
+          "script": "Latin",
+          "slot": "Respuesta: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Arabic": {
+          "script": "Arabic",
+          "slot": "الإجابة: A",
+          "tokens_bare": 1,
+          "tokens_slot": 5,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Hindi": {
+          "script": "Devanagari",
+          "slot": "उत्तर: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Bengali": {
+          "script": "Bengali",
+          "slot": "উত্তর: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Telugu": {
+          "script": "Telugu",
+          "slot": "సమాధానం: A",
+          "tokens_bare": 1,
+          "tokens_slot": 6,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Japanese": {
+          "script": "Japanese",
+          "slot": "答え: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Korean": {
+          "script": "Hangul",
+          "slot": "답변: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Chinese": {
+          "script": "Han",
+          "slot": "答案: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Thai": {
+          "script": "Thai",
+          "slot": "คำตอบ: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Swahili": {
+          "script": "Latin",
+          "slot": "Jibu: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        }
+      },
+      "cot_preamble_tokens": {
+        "English": 11,
+        "Ukrainian": 18,
+        "Russian": 16
+      },
+      "mean_inflation_latin": 1.2666666666666664,
+      "mean_inflation_nonlatin": 1.3333333333333335,
+      "n_langs_failing_budget3": 10,
+      "n_langs": 15
+    },
+    "Qwen2.5-1.5B-Instruct": {
+      "rows": {
+        "English": {
+          "script": "Latin",
+          "slot": "Answer: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Ukrainian": {
+          "script": "Cyrillic",
+          "slot": "Відповідь: А",
+          "tokens_bare": 1,
+          "tokens_slot": 9,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Russian": {
+          "script": "Cyrillic",
+          "slot": "Ответ: А",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "German": {
+          "script": "Latin",
+          "slot": "Antwort: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "French": {
+          "script": "Latin",
+          "slot": "Réponse : A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Spanish": {
+          "script": "Latin",
+          "slot": "Respuesta: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Arabic": {
+          "script": "Arabic",
+          "slot": "الإجابة: A",
+          "tokens_bare": 1,
+          "tokens_slot": 6,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Hindi": {
+          "script": "Devanagari",
+          "slot": "उत्तर: A",
+          "tokens_bare": 1,
+          "tokens_slot": 7,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Bengali": {
+          "script": "Bengali",
+          "slot": "উত্তর: A",
+          "tokens_bare": 1,
+          "tokens_slot": 7,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Telugu": {
+          "script": "Telugu",
+          "slot": "సమాధానం: A",
+          "tokens_bare": 1,
+          "tokens_slot": 15,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Japanese": {
+          "script": "Japanese",
+          "slot": "答え: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Korean": {
+          "script": "Hangul",
+          "slot": "답변: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Chinese": {
+          "script": "Han",
+          "slot": "答案: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Thai": {
+          "script": "Thai",
+          "slot": "คำตอบ: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Swahili": {
+          "script": "Latin",
+          "slot": "Jibu: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        }
+      },
+      "cot_preamble_tokens": {
+        "English": 11,
+        "Ukrainian": 24,
+        "Russian": 19
+      },
+      "mean_inflation_latin": 1.2666666666666664,
+      "mean_inflation_nonlatin": 2.0333333333333337,
+      "n_langs_failing_budget3": 11,
+      "n_langs": 15
+    },
+    "SmolLM2-360M-Instruct": {
+      "rows": {
+        "English": {
+          "script": "Latin",
+          "slot": "Answer: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Ukrainian": {
+          "script": "Cyrillic",
+          "slot": "Відповідь: А",
+          "tokens_bare": 1,
+          "tokens_slot": 11,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Russian": {
+          "script": "Cyrillic",
+          "slot": "Ответ: А",
+          "tokens_bare": 1,
+          "tokens_slot": 8,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "German": {
+          "script": "Latin",
+          "slot": "Antwort: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "French": {
+          "script": "Latin",
+          "slot": "Réponse : A",
+          "tokens_bare": 1,
+          "tokens_slot": 6,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Spanish": {
+          "script": "Latin",
+          "slot": "Respuesta: A",
+          "tokens_bare": 1,
+          "tokens_slot": 5,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Arabic": {
+          "script": "Arabic",
+          "slot": "الإجابة: A",
+          "tokens_bare": 1,
+          "tokens_slot": 10,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Hindi": {
+          "script": "Devanagari",
+          "slot": "उत्तर: A",
+          "tokens_bare": 1,
+          "tokens_slot": 8,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Bengali": {
+          "script": "Bengali",
+          "slot": "উত্তর: A",
+          "tokens_bare": 1,
+          "tokens_slot": 12,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Telugu": {
+          "script": "Telugu",
+          "slot": "సమాధానం: A",
+          "tokens_bare": 1,
+          "tokens_slot": 23,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Japanese": {
+          "script": "Japanese",
+          "slot": "答え: A",
+          "tokens_bare": 1,
+          "tokens_slot": 6,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Korean": {
+          "script": "Hangul",
+          "slot": "답변: A",
+          "tokens_bare": 1,
+          "tokens_slot": 7,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Chinese": {
+          "script": "Han",
+          "slot": "答案: A",
+          "tokens_bare": 1,
+          "tokens_slot": 7,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Thai": {
+          "script": "Thai",
+          "slot": "คำตอบ: A",
+          "tokens_bare": 1,
+          "tokens_slot": 12,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Swahili": {
+          "script": "Latin",
+          "slot": "Jibu: A",
+          "tokens_bare": 1,
+          "tokens_slot": 5,
+          "fits_3": false,
+          "fits_4": false
+        }
+      },
+      "cot_preamble_tokens": {
+        "English": 11,
+        "Ukrainian": 38,
+        "Russian": 43
+      },
+      "mean_inflation_latin": 1.5333333333333334,
+      "mean_inflation_nonlatin": 3.4666666666666663,
+      "n_langs_failing_budget3": 14,
+      "n_langs": 15
+    },
+    "bloom-560m": {
+      "rows": {
+        "English": {
+          "script": "Latin",
+          "slot": "Answer: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Ukrainian": {
+          "script": "Cyrillic",
+          "slot": "Відповідь: А",
+          "tokens_bare": 1,
+          "tokens_slot": 10,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Russian": {
+          "script": "Cyrillic",
+          "slot": "Ответ: А",
+          "tokens_bare": 1,
+          "tokens_slot": 5,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "German": {
+          "script": "Latin",
+          "slot": "Antwort: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "French": {
+          "script": "Latin",
+          "slot": "Réponse : A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Spanish": {
+          "script": "Latin",
+          "slot": "Respuesta: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Arabic": {
+          "script": "Arabic",
+          "slot": "الإجابة: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Hindi": {
+          "script": "Devanagari",
+          "slot": "उत्तर: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Bengali": {
+          "script": "Bengali",
+          "slot": "উত্তর: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Telugu": {
+          "script": "Telugu",
+          "slot": "సమాధానం: A",
+          "tokens_bare": 1,
+          "tokens_slot": 5,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Japanese": {
+          "script": "Japanese",
+          "slot": "答え: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        },
+        "Korean": {
+          "script": "Hangul",
+          "slot": "답변: A",
+          "tokens_bare": 1,
+          "tokens_slot": 6,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Chinese": {
+          "script": "Han",
+          "slot": "答案: A",
+          "tokens_bare": 1,
+          "tokens_slot": 3,
+          "fits_3": true,
+          "fits_4": true
+        },
+        "Thai": {
+          "script": "Thai",
+          "slot": "คำตอบ: A",
+          "tokens_bare": 1,
+          "tokens_slot": 8,
+          "fits_3": false,
+          "fits_4": false
+        },
+        "Swahili": {
+          "script": "Latin",
+          "slot": "Jibu: A",
+          "tokens_bare": 1,
+          "tokens_slot": 4,
+          "fits_3": false,
+          "fits_4": true
+        }
+      },
+      "cot_preamble_tokens": {
+        "English": 11,
+        "Ukrainian": 26,
+        "Russian": 27
+      },
+      "mean_inflation_latin": 1.2666666666666664,
+      "mean_inflation_nonlatin": 1.7,
+      "n_langs_failing_budget3": 11,
+      "n_langs": 15
+    }
+  },
+  "_requested_models": [
+    "INSAIT-Institute/MamayLM-Gemma-3-12B-IT-v1.0",
+    "Qwen/Qwen2.5-1.5B-Instruct",
+    "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "bigscience/bloom-560m"
+  ],
+  "_provenance": {
+    "git_commit": "bd7fe9dfc421fa6cfa2d1f8dc20bae41999e34a2",
+    "git_dirty_scripts": false,
+    "script": "answer_budget_fertility.py",
+    "written_utc": "2026-07-14T13:18:25+00:00"
+  }
+}

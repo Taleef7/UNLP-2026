@@ -1,0 +1,217 @@
+{
+  "N": 461,
+  "sesoi": 0.03,
+  "metrics": {
+    "Doc@1": {
+      "baseline": 0.9219088937093276,
+      "n_wrong": 36,
+      "headroom": 0.0780911062906724,
+      "observed_churn_p10": 0.0509761388286334,
+      "observed_discordance_pd": 0.07483731019522777,
+      "mde80_sim": null,
+      "mde80_closed_form": 0.035695416968397564,
+      "variants": {
+        "bm25_lemma": {
+          "delta": -0.052060737527114966,
+          "ci": [
+            -0.0824295010845987,
+            -0.021691973969631236
+          ],
+          "tost_p": 0.9307,
+          "verdict": "DIFFERENT"
+        },
+        "bm25_raw": {
+          "delta": -0.1561822125813449,
+          "ci": [
+            -0.19522776572668113,
+            -0.11496746203904555
+          ],
+          "tost_p": 1.0,
+          "verdict": "DIFFERENT"
+        },
+        "hybrid_lemma_dw0.30_sw0.70": {
+          "delta": -0.021691973969631236,
+          "ci": [
+            -0.04772234273318872,
+            0.004338394793926247
+          ],
+          "tost_p": 0.2751,
+          "verdict": "inconclusive"
+        },
+        "hybrid_lemma_dw0.50_sw0.50": {
+          "delta": -0.019522776572668113,
+          "ci": [
+            -0.04338394793926247,
+            0.004338394793926247
+          ],
+          "tost_p": 0.2103,
+          "verdict": "inconclusive"
+        },
+        "hybrid_lemma_dw0.70_sw0.30": {
+          "delta": -0.013015184381778741,
+          "ci": [
+            -0.03470715835140998,
+            0.008676789587852495
+          ],
+          "tost_p": 0.0693,
+          "verdict": "inconclusive"
+        },
+        "hybrid_lemma_dw0.90_sw0.10": {
+          "delta": -0.0021691973969631237,
+          "ci": [
+            -0.021691973969631236,
+            0.015184381778741865
+          ],
+          "tost_p": 0.0025,
+          "verdict": "EQUIVALENT (|d| < 0.03)"
+        },
+        "hybrid_raw_dw0.30_sw0.70": {
+          "delta": -0.06290672451193059,
+          "ci": [
+            -0.09327548806941431,
+            -0.03465292841648669
+          ],
+          "tost_p": 0.9878,
+          "verdict": "DIFFERENT"
+        },
+        "hybrid_raw_dw0.50_sw0.50": {
+          "delta": -0.04121475054229935,
+          "ci": [
+            -0.06941431670281996,
+            -0.015184381778741865
+          ],
+          "tost_p": 0.8082,
+          "verdict": "DIFFERENT"
+        },
+        "hybrid_raw_dw0.70_sw0.30": {
+          "delta": -0.0368763557483731,
+          "ci": [
+            -0.06073752711496746,
+            -0.015184381778741865
+          ],
+          "tost_p": 0.7356,
+          "verdict": "DIFFERENT"
+        },
+        "hybrid_raw_dw0.90_sw0.10": {
+          "delta": -0.021691973969631236,
+          "ci": [
+            -0.04338394793926247,
+            0.0
+          ],
+          "tost_p": 0.2323,
+          "verdict": "inconclusive"
+        }
+      }
+    },
+    "Pg@1": {
+      "baseline": 0.49023861171366595,
+      "n_wrong": 235,
+      "headroom": 0.5097613882863341,
+      "observed_churn_p10": 0.08026030368763556,
+      "observed_discordance_pd": 0.16052060737527113,
+      "mde80_sim": 0.062499999999999986,
+      "mde80_closed_form": 0.05227797681029569,
+      "variants": {
+        "bm25_lemma": {
+          "delta": -0.01735357917570499,
+          "ci": [
+            -0.06290672451193059,
+            0.03036876355748373
+          ],
+          "tost_p": 0.3005,
+          "verdict": "inconclusive"
+        },
+        "bm25_raw": {
+          "delta": -0.09978308026030369,
+          "ci": [
+            -0.1475054229934924,
+            -0.052060737527114966
+          ],
+          "tost_p": 0.9972,
+          "verdict": "DIFFERENT"
+        },
+        "hybrid_lemma_dw0.30_sw0.70": {
+          "delta": 0.02386117136659436,
+          "ci": [
+            -0.01735357917570499,
+            0.06724511930585683
+          ],
+          "tost_p": 0.4014,
+          "verdict": "inconclusive"
+        },
+        "hybrid_lemma_dw0.50_sw0.50": {
+          "delta": 0.013015184381778741,
+          "ci": [
+            -0.021691973969631236,
+            0.04772234273318872
+          ],
+          "tost_p": 0.1813,
+          "verdict": "inconclusive"
+        },
+        "hybrid_lemma_dw0.70_sw0.30": {
+          "delta": 0.0021691973969631237,
+          "ci": [
+            -0.02386117136659436,
+            0.028199566160520606
+          ],
+          "tost_p": 0.0222,
+          "verdict": "EQUIVALENT (|d| < 0.03)"
+        },
+        "hybrid_lemma_dw0.90_sw0.10": {
+          "delta": -0.004338394793926247,
+          "ci": [
+            -0.019522776572668113,
+            0.010845986984815618
+          ],
+          "tost_p": 0.0009,
+          "verdict": "EQUIVALENT (|d| < 0.03)"
+        },
+        "hybrid_raw_dw0.30_sw0.70": {
+          "delta": -0.06073752711496746,
+          "ci": [
+            -0.10412147505422993,
+            -0.01735357917570499
+          ],
+          "tost_p": 0.9229,
+          "verdict": "DIFFERENT"
+        },
+        "hybrid_raw_dw0.50_sw0.50": {
+          "delta": -0.03036876355748373,
+          "ci": [
+            -0.06941431670281996,
+            0.008676789587852495
+          ],
+          "tost_p": 0.5166,
+          "verdict": "inconclusive"
+        },
+        "hybrid_raw_dw0.70_sw0.30": {
+          "delta": -0.010845986984815618,
+          "ci": [
+            -0.04338394793926247,
+            0.021691973969631236
+          ],
+          "tost_p": 0.1287,
+          "verdict": "inconclusive"
+        },
+        "hybrid_raw_dw0.90_sw0.10": {
+          "delta": -0.015184381778741865,
+          "ci": [
+            -0.0368763557483731,
+            0.008676789587852495
+          ],
+          "tost_p": 0.1173,
+          "verdict": "inconclusive"
+        }
+      }
+    }
+  },
+  "_provenance": {
+    "git_commit": "bd7fe9dfc421fa6cfa2d1f8dc20bae41999e34a2",
+    "git_dirty_scripts": false,
+    "script": "power_analysis.py",
+    "written_utc": "2026-07-14T13:18:18+00:00",
+    "inputs": {
+      "outputs/retrieval_eval/per_query_hits.json": "7f22c7f910fad4bb"
+    }
+  }
+}
